@@ -8,26 +8,19 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
-    <!--Replace with your tailwind.css once created-->
-    <link href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
-      html {
-        font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-      }
-    </style>
   </head>
 
-  <body class="leading-normal tracking-normal text-indigo-400 m-6 bg-cover bg-fixed" style="background-image: url('background.png');"
-    <div class="h-full">
+  <body class="leading-normal tracking-normal bg-cover bg-fixed" style="background-image: url('background.png');">
+
+
       <!--Nav-->
-      <div class="w-full container mx-auto">
-        <div class="w-full flex items-center justify-between">
-          <a class="flex items-center text-blue-700 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="https://coeng.uaa.alaska.edu/robotics/">
-            UAA <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-green-200 to-yellow-300">Robotics</span>
+      <div class="w-full container mx-auto p-3">
+        <div class="w-full flex items-center justify-between content-center">
+          <a class="flex items-center text-blue-300 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="https://coeng.uaa.alaska.edu/robotics/">
+            UAA <span class="bg-clip-text text-white ">Robotics</span>
           </a>
 
           <div class="flex w-1/2 justify-end content-center">
@@ -51,49 +44,81 @@
       </div>
 
       <!--Main-->
-      <div class="container pt-24 md:pt-36 pmx-auto flex flex-wrap flex-col md:flex-row items-center">
-        <!--1st row Left Col-->
-        <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
-          <h1 class="my-4 text-3xl md:text-5xl text-white opacity-75 font-bold leading-tight text-center md:text-left">
-            Welcome to
-            <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-green-200 to-yellow-300">
-              UAA Iceberg Robotics
-            </span>
-            ...
-          </h1>
+      <div class=" flex flex-wrap flex-col md:flex-row  my-10 content-center ">
 
-          <p class="leading-normal text-base text-blue-300 md:text-2xl mb-8 text-center md:text-left">
-            Let the adventures begin!
-          </p>
+        <!--1st row-->
+        <div class="relative flex-col w-full h-96  overflow-hidden flex-row grow ">
+          
+          <div class="absolute z-30 flex w-2/5 align-middle flex flex-col pl-5 py-20  overflow-y-hidden">
+            <h1 class="my-4 text-3xl md:text-5xl text-blue-900 align-middle  opacity-75 font-bold leading-tight">
+              Welcome to
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-green-500 to-yellow-300">
+                UAA Iceberg Robotics
+              </span>
+              ...
+            </h1>
+            <p class="leading-normal text-base text-blue-900 md:text-2xl ">
+              Let the adventures begin!
+            </p>
+          </div>
+          
+
+          <div class="absolute top-0 right-0 flex w-full h-full">
+            <div class="w-1/3 h-full bg-gray-100"></div>
+            <div class="relative w-1/3">
+              <svg
+                fill="currentColor"
+                viewBox="0 0 100 100"
+                class="absolute inset-y-0 z-20 h-full text-gray-100"
+              >
+                <polygon id="diagonal" points="0,0 100,0 50,100 0,100"></polygon>
+              </svg>
+              <svg
+                fill="currentColor"
+                viewBox="0 0 100 100"
+                class="absolute inset-y-0 z-10 h-full ml-6 text-white opacity-50"
+              >
+                <polygon points="0,0 100,0 50,100 0,100"></polygon>
+              </svg>
+            </div>
+          </div>
+
+          <div class="absolute w-3/5 top-0 right-0  h-full">
+            <video autoplay loop muted class="w-full  min-h-full absolute object-cover">
+              <source src="bot.mp4" type="video/mp4"/>
+              Robotic driving
+            </video>
+          </div>
+      
 
 
         </div>
-
-        <!--1st row Right Col-->
-        <header class="w-full xl:w-3/5 p-24 overflow-hidden rounded-lg relative flex items-center justify-center overflow-hidden">
-          <header class="relative z-50 w-full  min-h-full  text-9xl  font-bold mix-blend-lighten text-white rounded-lg">
-            UAA Robotics
-          </header>
-          <video autoplay loop muted class="w-full  min-h-full  absolute object-cover rounded-lg">
-            <source src="bot.mp4" type="video/mp4"/>
-            Your browser does not support the video tag.
-          </video>
-        </header>
-
 
 
         <!--2nd row left col-->
-        <div class="relative w-full xl:w-2/5 p-12  overflow-hidden ">
-          <a class="bg-gradient-to-r from-green-500 to-blue-500 inline-block rounded-lg hover:text-underline text-center p-2 md:h-auto md:p-4 transform hover:scale-125 duration-300 ease-in-out">
-            <p class="font-bold text-white text-center text-5xl">5pm Friday Meetings<br> <br> </p>
-            <p class="text-white text-center text-base">UAA Engineering and Industry Building: <br> Robotics Innovation Lab (<b>316</b>)</p> 
-          </a>
+        <div class="flex items-center w-full md:w-2/5 p-5 my-10" >
+          <a class = "md:border-4 md:border-r-white border-transparent w-full rounded-sm text-white" href="https://goo.gl/maps/ww8NQvasEESDBqcA9">
+            
+            <div class = "flex justify-center w-full">
+                <svg class="w-20 h-20 p-2 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+              </div>
 
-        </div>
+              <div class="text-center hover:text-underline transform hover:scale-105 duration-300 ease-in-out">
+                <p class="font-bold text-3xl md:text-5xl ">5pm Friday Meetings<br> <br> </p>
+                <p class="text-base">UAA Engineering and Industry Building: <br> Robotics Innovation Lab (<b>316</b>)</p> 
+              </div>
+
+            </a>
+          </div>
+
+
    
 
         <!--2nd row right col-->
-        <div class="w-full xl:w-3/5 p-12  overflow-hidden ">
+        <div class="w-full md:w-3/5 p-12 my-10 overflow-hidden">
           <p class="font-mono menlo text-white text-2xl">We are 
           <a class="font-bold text-green-200 text-4xl">UAA's College Robotics Team</a> in Anchorage, Alaska. We embrace all types of creativity. If your interested in
           <a class=" font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-green-200 to-yellow-300"> robotics, engineering, programming, marketing, or project management,</a> 
@@ -101,17 +126,24 @@
             <a class="text-blue-400">You just have to be willing to learn!</a> </p>
         </div>
 
+        <!--3rd row images-->
+        <div class="flex overflow-x-scroll">
+            <img class="m-4 w-96 object-contain rounded-lg inline-block" src="teamPics/1.png" alt="Team members working on the VEX Robot">
+            <img class="m-4 w-96 object-contain rounded-lg inline-block" src="teamPics/2.png" alt="Team members working on the VEX Robot">
+            <img class="m-4 w-96 object-contain rounded-lg inline-block" src="teamPics/3.png" alt="Team members working on the VEX Robot">
+            <img class="m-4 w-96 object-contain rounded-lg inline-block" src="teamPics/4.png" alt="Team members working on the VEX Robot">
+            <img class="m-4 w-96 object-contain rounded-lg inline-block" src="teamPics/5.png" alt="Team members working on the VEX Robot">
+        </div>
 
         
 
         <!--Footer-->
-        <div class="w-full pt-16 pb-6 text-sm text-center md:text-left fade-in">
-          <a class="text-gray-500 no-underline hover:no-underline" href="#"></a>
-          Website created by the UAA Robotics Programming Team, inspired in part by
-          <a class="text-gray-500 no-underline hover:no-underline" href="https://www.tailwindtoolbox.com">TailwindToolbox.com</a>
-        </div>
+        <p class="w-full py-10 text-sm text-center text-white">
+         Website created by the UAA Robotics Programming Team</p>
+        </p>
         
       </div>
-    </div>
+
+
   </body>
 </html>
