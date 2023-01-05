@@ -46,7 +46,7 @@ Run the following command to install all the project requirements.
 You now have a local copy of the website on your computer and you can run
 it by running the `app.py` run the following command to check. 
 
-`python3 app.py`
+'flask run'
 
 Note: if the webpage doesn't update with changes after refreshing the browser, you
 may need to set Flask to development mode by running `export FLASK_ENV=development`
