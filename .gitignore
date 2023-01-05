@@ -3,3 +3,4 @@ __pycache__/
 RoboVenv/
 .vs/
 flask_session
+.DS_Store
