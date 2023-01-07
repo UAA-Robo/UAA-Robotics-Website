@@ -90,52 +90,163 @@
 
     <!--Main-->
       <div class="w-full flex block flex-grow flex-wrap w-auto">
+      
+      <!--Right Sidebar with current sponsors-->
+      <div class = "flex w-full md:w-1/4 md:fixed p-4 justify-center md:top-20 md:right-0 md:bottom-20">
+        <div class = "bg-white p-4 rounded shadow-lg shadow-cyan-300">
+          <h class = "text-xl font-bold">
+            Thank you to our 2022-2023 sponsors!
+          </h>
+          <img class="object-cover w-full pt-3" src="sponsors/beadedStream.png" alt="beadedstream">
+          <img class="object-cover w-full pt-3" src="sponsors/coffman.png" alt="Coffman">
+          <ul class="list-none pt-5 text-center">
+            <li>Antonio Pennell</li>
+            <li>Billy Redman</li>
+            <li>Erik Williams</li>
+            <li>Jacobo Franco</li>
+            <li>Jayna & Sam Combs</li>
+            <li>Robert & Melissa Branch</li>
+            <li>Sean Gwaltney</li>
+            <li>Steven & Jennifer Buchanan</li>
+            <li>Virginia & Mark Groeschel</li>
+          </ul>
+        </div>
+        </div>
         
         <!--Left Body-->
-        <div class = "flex w-full md:w-3/4">
+        <div class = "flex flex-wrap w-full md:w-3/4 p-10">
+
          
-
-
-          <!--money raised at events-->
-          <div class="flex w-full flex-wrap items-center m-5 px-5 bg-yellow rounded-lg">
-              <div class="flex w-full md:w-2/5 flex-wrap text-white p-5">
-                  <ul class="list-disc">
-                      <li>
-                          Innertube Water Polo Event 10/13/2022 - won $150
-                      </li>
-                      <li>
-                          Bake Sale 11/5/22 @ Pack the House UAA Volleyball Game - raised $494.04 and won $500
-                      </li>
-                      <li>Bake Sale 12/2&3/22 @ UAA Hockey Games - raised $510.17</li>
-                  </ul>
-              </div>
-          </div>
-
-        </div>
-
-
-        <!--Right Sidebar with current sponsors-->
-        <div class = "flex w-full md:w-1/4 p-4 justify-center ">
-          <div class = "bg-white p-4 rounded shadow-lg shadow-cyan-300">
-            <h class = "text-xl font-bold">
-              Thank you to our 2022-2023 sponsors!
-            </h>
-            <img class="object-cover w-full pt-3" src="sponsors/beadedStream.png" alt="beadedstream">
-            <img class="object-cover w-full" src="sponsors/coffman.png" alt="Coffman">
-            <ul class="list-none">
-              <li>Antonio Pennell</li>
-              <li>Billy Redman</li>
-              <li>Erik Williams</li>
-              <li>Jacobo Franco</li>
-              <li>Jayna and Sam Combs</li>
-              <li>Robert and Melissa Branch</li>
-              <li>Sean Gwaltney</li>
-              <li>Steven and Jennifer Buchanan</li>
-              <li>Virginia and Mark Groeschel</li>
-            </ul>
-          </div>
-
           
+          <div class="flex flex-wrap w-full text-white">
+            <p class = "w-full text-lg">
+              Our team has been busy designing and building two robots for the VEX U competitions. 
+              We will be ready to go to competitions once we raise the funds.
+              The following amounts of funding this season will determine what we are able to accomplish:
+            </p>
+
+
+          <!--Table for $ goal-->
+          <table class="table-auto m-10 text-white text-left">
+            <thead class="border-b">
+              <tr>
+                <th class="pr-8">Amount (cumulative)</th>
+                <th>Impact (all lower tiers include the impact of those above)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="py-5">$8,000</td>
+                <td class="py-5">Allow 9 members to travel to the Tiger Town Throwdown in Clemson, South Carolina (February 4th, 2023).</td>
+              </tr>
+              <tr class="border-b">
+                <td class="py-5">$15,000</td>
+                <td class="py-5">Allow 9 members to travel to the Illini Cornfield Clash in Champaign, Illinois (VEX U) (March 4th 2023).</td>
+              </tr>
+              <tr class="border-b">
+                <td class="py-5">$25,000</td>
+                <td class="py-5">Allow 9 members to travel to the 2022 VEX Robotics World Championship in Dallas, Texas (April 27th-29th, 2023).</td>
+              </tr>
+            </tbody>
+          </table>
+
+            <!-- Progress Bar (https://flowbite.com/docs/components/progress/)-->
+            <p class="w-full py-5 text-4xl text-white">
+              $25,000 <span class="text-base text-gray-300">goal for competition travel</span>
+            </p>
+
+            <div class="w-full bg-gray-200 rounded-full h-7 items-center">
+              <div class="bg-amber-400 h-7 p-1 rounded-full text-xs text-white text-center items-center " style="width: 20%">20% reached</div>
+            </div>
+          </div>
+    
+
+          <!-- Funding Sources-->
+          <p class="w-full py-5 text-4xl text-white"> 2022-2023 Funding Sources </p>
+
+          <!--Pic Row-->
+          <div class=" flex w-full overflow-x-scroll m-4 p-4 items-center  ">
+            
+            <div class = "mx-1">
+              <div class="w-96 h-96 rounded-lg overflow-hidden bg-gray-200 shadow-xl">
+                <img class="object-cover w-full h-52" src="fundPics/vexParts.png" alt=" VEX Parts">
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl ">UAA Special Project Fund & Club Council Fund </div>
+                  <div class="mb-2">Sep 2022</div>
+                  <p class="text-gray-700 text-base">
+                    4,515.79 to fund the initial supplies needed for the VEX competition.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class = "mx-1">
+              <div class="w-96 h-96 rounded-lg overflow-hidden bg-gray-200 shadow-xl">
+                <img class="object-cover w-full h-52" src="fundPics/waterPolo.png" alt="UAA Inner tube Water Polo">
+                <div class="px-6 py-2">
+                  <div class="font-bold text-xl ">UAA Innertube Water Polo Event</div>
+                  <div class="mb-2">13 Oct 2022</div>
+                  <p class="text-gray-700 text-base">
+                    We won $150 for the team by competing and tying in a water-polo game!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class = "mx-1">
+              <div class="w-96 h-96 rounded-lg overflow-hidden bg-gray-200 shadow-xl">
+                <img class="object-cover w-full h-52" src="fundPics/volleyBake.png" alt="Bake Sale">
+                <div class="px-6 py-2">
+                  <div class="font-bold text-xl ">Bake Sale @ Pack the House UAA Volleyball Gam</div>
+                  <div class="mb-2">5 Nov 2022</div>
+                  <p class="text-gray-700 text-base">
+                    We raised $494.04 from selling goods and won an extra $500 from a raffle for clubs.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class = "mx-1">
+              <div class="w-96 h-96 rounded-lg overflow-hidden bg-gray-200 shadow-xl">
+                <img class="object-cover w-full h-52" src="fundPics/hockeyBake.png" alt="Bake Sale">
+                <div class="px-6 py-2">
+                  <div class="font-bold text-xl ">Bake Sale @ UAA Hockey Games</div>
+                  <div class="mb-2">5-6 Nov 2022</div>
+                  <p class="text-gray-700 text-base">
+                    We raised $510.17 and watched our home team win!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class = "mx-1">
+              <div class="w-96 h-96 rounded-lg overflow-hidden bg-gray-200 shadow-xl">
+                <img class="object-cover w-full h-52" src="fundPics/field.png" alt="Field">
+                <div class="px-6 py-2">
+                  <div class="font-bold text-xl ">REC Grant</div>
+                  <div class="mb-2">Dec 2022</div>
+                  <p class="text-gray-700 text-base">
+                    We won a REC grant to provide a VEX competition field and extra supplies.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class = "mx-1">
+              <div class="w-96 h-96 rounded-lg overflow-hidden bg-gray-200 shadow-xl">
+                <img class="object-cover w-full h-52" src="fundPics/flowerSale.png" alt="Soldering Workshop">
+                <div class="px-6 py-2">
+                  <div class="font-bold text-xl ">Flower Sales at Graduation</div>
+                  <div class="mb-2">18 Dec 2022</div>
+                  <p class="text-gray-700 text-base">
+                    We partnered with Blossoms Express to sell flowers and we raised $1,219.80!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         
 

@@ -1,4 +1,5 @@
-from flask import Flask, url_for, render_template, send_from_directory, redirect, render_template, request, session
+import configparser
+from flask import Flask, url_for, render_template, send_from_directory, redirect, render_template
 from flask_session import Session
 from tempfile import mkdtemp
 from pymongo import MongoClient
@@ -7,7 +8,7 @@ from pymongo import MongoClient
 
 app = Flask(__name__)
 
-app.config["TEMPLATES_AUTO_RELOAD"] = True
+
 
 @app.after_request
 def after_request(response):
@@ -20,6 +21,9 @@ app.config["SESSION_FILE_DIR"] = mkdtemp()
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 
+# Read the INI file
+config = configparser.ConfigParser()
+config.read("config.ini")
 
 
 '''
@@ -28,11 +32,11 @@ https://drive.google.com/drive/folders/1AdAEVCsk90r3HB74M-stUP_JhE84dCHs?usp=sha
 There is also more to uncomment futher below and  in internalIndex.html
 '''
 
-'''
-client = MongoClient('localhost', 27017) #For testing with local mongo db. 27017 is the proper port
-db = client['uaa-robo'] #Same as db = client.uaa-robo (but python doesn't like the uaa-robo format)
-person = db.Person
-'''
+
+client = MongoClient(config["PROD"]["DB_URI"]) #For testing with local mongo db. 27017 is the proper port
+db = client['sample_analytics'] #Same as db = client.uaa-robo (but python doesn't like the uaa-robo format)
+person = db.customers
+
 
 Session(app)
 
@@ -62,9 +66,8 @@ def fund():  # put application's code here
 
 
 # Uncomment the following if testing internalIndex.html with local MongoDB
-'''
+
 @app.route('/')
 @app.route('/internalIndex.html', methods = ['GET'])
 def internalIndex():  # put application's code here
     return render_template("internalIndex.html", person = person) 
-'''
