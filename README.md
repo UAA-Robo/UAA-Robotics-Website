@@ -51,7 +51,13 @@ it by running `app.py`  or the following command to check.
 Note: if the webpage doesn't update with changes after refreshing the browser, you
 may need to set Flask to development mode by running `export FLASK_ENV=development`
 
-7. Contribute!
+7. If you need to access pages (like internalIndex.html) that access Atlas MongoDB, 
+you will need one of the Web Dev members to add your local IP to the network access list.
+After that, if you are getting an `SSL: CERTIFICATE_VERIFY_FAILED` error, you may need to update
+your certificates. To do that (on mac), follow the first answer on this Stack Overflow:
+https://stackoverflow.com/questions/52805115/certificate-verify-failed-unable-to-get-local-issuer-certificate
+
+8. Contribute!
 
 Remember to talk to someone before you start pushing code to master, but you're
 ready to start writing code!

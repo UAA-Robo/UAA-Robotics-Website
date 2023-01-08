@@ -4,7 +4,7 @@ from flask_session import Session
 from tempfile import mkdtemp
 from pymongo import MongoClient
 
-                                                   ##USE 'FLASK RUN' COMMAND WITHIN YOUR VENV TO RUN APP##
+##USE 'FLASK RUN' COMMAND WITHIN YOUR VENV TO RUN APP##
 
 app = Flask(__name__)
 
@@ -33,7 +33,7 @@ There is also more to uncomment futher below and  in internalIndex.html
 '''
 
 
-client = MongoClient(config["PROD"]["DB_URI"]) #For testing with local mongo db. 27017 is the proper port
+client = MongoClient(config["PROD"]["DB_URI"]) #For testing with local mongo db, 27017 is the proper port
 db = client['sample_analytics'] #Same as db = client.uaa-robo (but python doesn't like the uaa-robo format)
 person = db.customers
 
