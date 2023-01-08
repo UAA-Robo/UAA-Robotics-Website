@@ -15,11 +15,11 @@
         <h1 class="text-3xl">People in Robotics</h1>
         <!-- Uncomment the following if testing with local MongoDB uaa-robo -->
         
-        <!-- 
-        {% for individual in person.find() %}
-        <p> Name: {{ individual["Fname"] }} {{ individual["Lname"] }} | UAA ID: {{ individual["UA_ID"] }}</p>
+        
+        {% for customers in person.find() %}
+        <p> Name: {{ customers["name"] }} {{ customers["address"] }} | UAA ID: {{ customers["username"] }}</p>
         {% endfor %}
-        -->
+       
 
 
     
