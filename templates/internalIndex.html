@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,29 +11,50 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
-    <body class="leading-normal tracking-normal bg-cover bg-teal-900 text-white" >
-    <div>
-        <h1 class="text-3xl">People in Robotics</h1>
-
+    <body class="flex flex-wrap leading-normal tracking-normal bg-cover text-black" >
         
-
-        <!--Alternative test queries using customer db-->
-        {% for individual in person.find() %}
-        <p> Name: {{ individual["Fname"] }} {{ individual["Lname"] }} | UAA ID: {{ individual["UA_ID"] }}</p>
-        {% endfor %}  
-
-        <!--
-        {% for customers in person.find() %}
-        <p> Name: {{ customers["name"] }} {{ customers["address"] }} | UAA ID: {{ customers["username"] }}</p>
-        {% endfor %}  
-        -->
-
-       
-
-
-    
         
-    </div>
+            
+            <!--Left Panel-->
+            <aside class="flex flex-wrap md:fixed w-full md:h-screen md:w-1/5 p-5 bg-gray-200 shadow-lg">
+                Stuff Here
+            </aside>
+            <!--Main Body-->
+            <div class="flex flex-wrap ml-auto mb-auto w-full md:w-4/5 p-5 items-start justify-start">
+                
+                <h1 class="text-3xl w-full">Tasks</h1>
+                <div class = "w-full">
+                    {% for task in tasks.find() %}
+                    
+                    <div class="flex flex-wrap w-full my-5 p-5 border-2 rounded-lg ">
+                        <div class="flex flex-wrap md:justify-between w-full">
+                            <!--Title-->
+                            <h class="text-2xl w-full md:w-auto">{{ task["Title"] }} </h>
+                            <!--Progress-->
+                            <div class ="flex md:justify-end">
+                                <p class="w-max px-2 text-center border-2 rounded-full bg-gray-200 ">{{ task["Status"] }}</p>
+                            </div>
+                        </div>
+
+                        <!--Date-->
+                        <p class="w-full text-gray-600">{{ task["DateCreated"] }} - {{ task["Deadline"] }}</p>
+                        <!--Description-->
+                        <p class="w-full">{{ task["DOD"] }}</p>
+
+                    </div>
+                    {% endfor %}  
+
+
+                    <!--Alternative test queries using customer db-->
+                    <!--
+                    {% for customers in person.find() %}
+                    <p> Name: {{ customers["name"] }} {{ customers["address"] }} | UAA ID: {{ customers["username"] }}</p>
+                    {% endfor %}  
+                    -->
+                </div>
+
+            </div>
+
 
     </body>
 </html>

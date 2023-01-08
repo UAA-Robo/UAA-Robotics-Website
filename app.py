@@ -4,6 +4,7 @@ from flask_session import Session
 from tempfile import mkdtemp
 from pymongo import MongoClient
 
+
 ##USE 'FLASK RUN' COMMAND WITHIN YOUR VENV TO RUN APP##
 
 app = Flask(__name__)
@@ -32,6 +33,7 @@ config.read("config.ini")
 client = MongoClient(config["PROD"]["DB_URI"]) 
 db = client['uaa-robo'] #Same as db = client.uaa-robo (but python doesn't like the uaa-robo format)
 person = db.Person
+tasks = db.Task
 
 #Alternative test customer db to use:
 '''
@@ -73,4 +75,4 @@ def fund():  # put application's code here
 @app.route('/')
 @app.route('/internalIndex.html', methods = ['GET'])
 def internalIndex():  # put application's code here
-    return render_template("internalIndex.html", person = person) 
+    return render_template("internalIndex.html", person = person, tasks = tasks) 
