@@ -12,14 +12,13 @@
 
 
   </head>
-
   <body class="leading-normal tracking-normal bg-cover bg-teal-900" > <!--style="background-image: url('background.png');" --> 
 
 
       <!--Nav-->
       <nav class="flex items-center justify-between flex-wrap p-6">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
-          <a class="flex items-center text-amber-400 hover:underline font-bold text-2xl lg:text-4xl" href="index.html">
+          <a class="flex items-center text-amber-400 hover:underline font-bold text-2xl lg:text-4xl" href="/">
             UAA <span class="bg-clip-text text-white ">Robotics</span>
           </a>
         </div>
@@ -35,13 +34,13 @@
         -->
         <div class="w-full block flex-grow sm:flex sm:items-center sm:w-auto">
           <div class="text-sm sm:flex-grow font-mono menlo">
-            <a href="projects.html" class="block mt-4 sm:inline-block sm:mt-0 text-white hover:text-yellow-300 mr-4">
+            <a href="projects" class="block mt-4 sm:inline-block sm:mt-0 text-white hover:text-yellow-300 mr-4">
               Projects
             </a>
-            <a href="outreach.html" class="block mt-4 sm:inline-block sm:mt-0 text-white hover:text-yellow-300 mr-4">
+            <a href="outreach" class="block mt-4 sm:inline-block sm:mt-0 text-white hover:text-yellow-300 mr-4">
               Outreach
             </a>
-            <a href="fund.html" class="block mt-4 sm:inline-block sm:mt-0 text-white hover:text-yellow-300">
+            <a href="fund" class="block mt-4 sm:inline-block sm:mt-0 text-white hover:text-yellow-300">
               Funding
             </a>
           </div>
@@ -89,8 +88,7 @@
         </div>
       </nav>
 
-
-
+    {%block body%}
       <!--Main-->
       <div class=" flex flex-wrap flex-col md:flex-row  my-10 content-center ">
 
@@ -201,12 +199,13 @@
 
         </div>
 
-        
+        {%endblock%}
 
         <!--Footer-->
         <p class="w-full py-10 text-sm text-center text-white">
-         Website created by the 2022/2023 UAA Robotics Web Development Team</p>
+         Website created by the 2022/2023 UAA Robotics Web Development Team
         </p>
+        
         
       </div>
 

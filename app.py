@@ -10,7 +10,6 @@ from pymongo import MongoClient
 app = Flask(__name__)
 
 
-
 @app.after_request
 def after_request(response):
     response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
@@ -30,14 +29,14 @@ config.read("config.ini")
 
 
 #This connects to our Atlas MongoDB. Your IP Adress will need to be added to the Newtork Access List on the Atlas website
-client = MongoClient(config["PROD"]["DB_URI"]) 
-db = client['uaa-robo'] #Same as db = client.uaa-robo (but python doesn't like the uaa-robo format)
+client = MongoClient(config["PROD"]["DB_URI"])
+db = client["uaa-robo"] #Same as db = client.uaa-robo (but python doesn't like the uaa-robo format)
 person = db.Person
 tasks = db.Task
 
 #Alternative test customer db to use:
 '''
-db = client['sample_analytics'] #Alternative testing
+db = client["sample_analytics"] #Alternative testing
 person = db.customers
 ''' 
 
@@ -52,27 +51,25 @@ Static Pages
 
 """
 
-@app.route('/', methods=["GET"])
-@app.route('/index.html')
+@app.route("/")
 def main():  # put application's code here
-    return render_template("index.html")
+    return render_template("home.html")
 
-@app.route('/projects.html', methods=["GET"])
+@app.route("/projects", methods=["GET"])
 def projects():  # put application's code here
     return render_template("projects.html")
 
-@app.route('/outreach.html', methods=["GET"])
+@app.route("/outreach", methods=["GET"])
 def outreach():  # put application's code here
     return render_template("outreach.html")
 
-@app.route('/fund.html', methods=["GET"])
+@app.route("/fund", methods=["GET"])
 def fund():  # put application's code here
     return render_template("fund.html")
 
 
 # Uncomment the following if testing internalIndex.html with local MongoDB
 
-@app.route('/')
-@app.route('/internalIndex.html', methods = ['GET'])
+@app.route("/internalIndex", methods = ["GET"])
 def internalIndex():  # put application's code here
     return render_template("internalIndex.html", person = person, tasks = tasks) 
