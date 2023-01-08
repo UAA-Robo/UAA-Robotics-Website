@@ -26,16 +26,19 @@ config = configparser.ConfigParser()
 config.read("config.ini")
 
 
-'''
-Uncomment the following if testing with local MongoDB uaa-robo downloaded from 
-https://drive.google.com/drive/folders/1AdAEVCsk90r3HB74M-stUP_JhE84dCHs?usp=sharing
-There is also more to uncomment futher below and  in internalIndex.html
-'''
 
 
-client = MongoClient(config["PROD"]["DB_URI"]) #For testing with local mongo db, 27017 is the proper port
-db = client['sample_analytics'] #Same as db = client.uaa-robo (but python doesn't like the uaa-robo format)
+#This connects to our Atlas MongoDB. Your IP Adress will need to be added to the Newtork Access List on the Atlas website
+client = MongoClient(config["PROD"]["DB_URI"]) 
+db = client['uaa-robo'] #Same as db = client.uaa-robo (but python doesn't like the uaa-robo format)
+person = db.Person
+
+#Alternative test customer db to use:
+'''
+db = client['sample_analytics'] #Alternative testing
 person = db.customers
+''' 
+
 
 
 Session(app)
