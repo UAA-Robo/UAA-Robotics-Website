@@ -4,7 +4,6 @@ from flask_session import Session
 from tempfile import mkdtemp
 from pymongo import MongoClient
 
-
 ##USE 'FLASK RUN' COMMAND WITHIN YOUR VENV TO RUN APP##
 
 app = Flask(__name__)

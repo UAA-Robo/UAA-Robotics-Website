@@ -25,23 +25,52 @@
                 <h1 class="text-3xl w-full">Tasks</h1>
                 <div class = "w-full">
                     {% for task in tasks.find() %}
-                    
-                    <div class="flex flex-wrap w-full my-5 p-5 border-2 rounded-lg ">
-                        <div class="flex flex-wrap md:justify-between w-full">
-                            <!--Title-->
-                            <h class="text-2xl w-full md:w-auto">{{ task["Title"] }} </h>
-                            <!--Progress-->
-                            <div class ="flex md:justify-end">
-                                <p class="w-max px-2 text-center border-2 rounded-full bg-gray-200 ">{{ task["Status"] }}</p>
+                        
+                        <!--Progress Color-->
+                   
+                        <div class="flex flex-wrap w-full my-5 p-5 border-2 rounded-lg ">
+                            <div class="flex flex-wrap md:justify-between w-full">
+                                <!--Title-->
+                                <h class="text-2xl w-full md:w-auto">{{ task["Title"] }} </h>
+                                <!--Progress-->
+                                <div class ="flex md:justify-end items-center">
+                                    {% if task["Status"] == "not-started" %}
+                                    <p class="w-max px-2 py-1 text-center rounded-full bg-gray-200 ">{{ task["Status"] }}</p>
+                                    {% endif %}
+
+                                    {% if task["Status"] == "in-progress" %}
+                                    <p class="w-max px-2 py-1 text-center rounded-full bg-yellow-200 ">{{ task["Status"] }}</p>
+                                    {% endif %}
+
+                                    {% if task["Status"] == "bottlenecked" %}
+                                    <p class="w-max px-2 py-1 text-center rounded-full bg-red-200 ">{{ task["Status"] }}</p>
+                                    {% endif %}
+
+                                    {% if task["Status"] == "complete" %}
+                                    <p class="w-max px-2 py-1 text-center rounded-full bg-green-200 ">{{ task["Status"] }}</p>
+                                    {% endif %}
+
+                                    {% if task["Status"] == "reoccurring" %}
+                                    <p class="w-max px-2 py-1 text-center rounded-full bg-blue-200 ">{{ task["Status"] }}</p>
+                                    {% endif %}
+
+
+                                </div>
                             </div>
+
+                            <!--Date-->
+                            <p class="w-full text-gray-600">{{ (task["DateCreated"]).strftime("%d %B %Y") }} </p>
+                            <!--Description-->
+                            <p class="w-full">{{ task["DOD"] }}</p>
+                            <!--Teams-->
+                            <div class="flex flex-wrap w-full">
+                                {% for eachTeam in task["Team"]%}
+                                    <p class="w-max px-2 my-0.5 mr-2 text-center border-2 rounded-full bg-gray-200 ">{{eachTeam}}</p>
+                                {% endfor %}
+                            </div>
+
+
                         </div>
-
-                        <!--Date-->
-                        <p class="w-full text-gray-600">{{ task["DateCreated"] }} - {{ task["Deadline"] }}</p>
-                        <!--Description-->
-                        <p class="w-full">{{ task["DOD"] }}</p>
-
-                    </div>
                     {% endfor %}  
 
 
