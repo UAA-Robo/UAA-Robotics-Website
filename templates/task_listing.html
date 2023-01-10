@@ -31,7 +31,7 @@
                         <div class="flex flex-wrap w-full my-5 p-5 border-2 rounded-lg ">
                             <div class="flex flex-wrap md:justify-between w-full">
                                 <!--Title-->
-                                <h class="text-2xl w-full md:w-auto">{{ task["Title"] }} </h>
+                                <a href="{{ url_for('task', id=task['_id']) }}" class="text-2xl w-full md:w-auto hover:u" >{{ task["Title"] }} </a>
                                 <!--Progress-->
                                 <div class ="flex md:justify-end items-center">
                                     {% if task["Status"] == "not-started" %}
@@ -76,7 +76,7 @@
 
                     <!--Alternative test queries using customer db-->
                     <!--
-                    {% for customers in person.find() %}
+                    {% for customers in people.find() %}
                     <p> Name: {{ customers["name"] }} {{ customers["address"] }} | UAA ID: {{ customers["username"] }}</p>
                     {% endfor %}  
                     -->

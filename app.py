@@ -3,6 +3,7 @@ from flask import Flask, url_for, render_template, send_from_directory, redirect
 from flask_session import Session
 from tempfile import mkdtemp
 from pymongo import MongoClient
+from bson.objectid import ObjectId #For working with PyMongo object Ids
 
 ##USE 'FLASK RUN' COMMAND WITHIN YOUR VENV TO RUN APP##
 
@@ -30,19 +31,17 @@ config.read("config.ini")
 #This connects to our Atlas MongoDB. Your IP Adress will need to be added to the Newtork Access List on the Atlas website
 client = MongoClient(config["PROD"]["DB_URI"])
 db = client["uaa-robo"] #Same as db = client.uaa-robo (but python doesn't like the uaa-robo format)
-person = db.Person
+people = db.Person
 tasks = db.Task
+logs = db.Log
 
 #Alternative test customer db to use:
 '''
 db = client["sample_analytics"] #Alternative testing
-person = db.customers
+people = db.customers
 ''' 
 
-
-
 Session(app)
-
 
 
 """
@@ -67,8 +66,19 @@ def fund():  # put application's code here
     return render_template("fund.html")
 
 
-# Uncomment the following if testing internalIndex.html with local MongoDB
+"""
+Dynamic Pages
 
-@app.route("/internalIndex", methods = ["GET"])
-def internalIndex():  # put application's code here
-    return render_template("internalIndex.html", person = person, tasks = tasks) 
+"""
+
+@app.route("/task_listing", methods = ["GET"])
+def task_listing():  # put application's code here
+    return render_template("task_listing.html", people = people, tasks = tasks) 
+
+
+@app.route("/tasks/<string:id>", methods = ["GET"])
+def task(id):  
+
+    singleTask = tasks.find_one(ObjectId(id))
+
+    return render_template("task.html", singleTask = singleTask, logs=logs, people = people) 
