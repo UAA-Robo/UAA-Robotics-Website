@@ -49,7 +49,7 @@ it by running `app.py`  or the following command to check.
 `flask run`
 
 Note: if the webpage doesn't update with changes after refreshing the browser, you
-may need to set Flask to development mode by running `export FLASK_ENV=development`
+may need to stop Flask (`control c`), put Flask to development mode by running `export FLASK_ENV=development`, and restart it.
 
 7. If you need to access pages (like internalIndex.html) that access Atlas MongoDB, 
 you will need one of the Web Dev members to add your local IP to the network access list.
