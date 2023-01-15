@@ -1,11 +1,13 @@
 import configparser
-from flask import Flask, url_for, render_template, send_from_directory, redirect, render_template
+from flask import Flask, url_for, render_template, send_from_directory, redirect, render_template, request
 from flask_session import Session
 from tempfile import mkdtemp
 from pymongo import MongoClient
 from bson.objectid import ObjectId  # For working with PyMongo object Ids
 
-# USE 'FLASK RUN' COMMAND WITHIN YOUR VENV TO RUN APP##
+from form_actions import create_new_user
+
+# USE 'FLASK RUN' COMMAND WITHIN YOUR VENV TO RUN APP
 
 app = Flask(__name__)
 
@@ -26,7 +28,8 @@ app.config["SESSION_TYPE"] = "filesystem"
 config = configparser.ConfigParser()
 config.read("config.ini")
 
-# This connects to our Atlas MongoDB. Your IP Adress will need to be added to the Newtork Access List on the Atlas website
+# This connects to our Atlas MongoDB. Your IP Adress will need to be added to the Network Access List on the Atlas
+# website
 client = MongoClient(config["PROD"]["DB_URI"])
 db = client["uaa-robo"]  # Same as db = client.uaa-robo (but python doesn't like the uaa-robo format)
 people = db.Person
@@ -45,6 +48,7 @@ Session(app)
 Static Pages
 
 """
+
 
 
 @app.route("/")
@@ -67,6 +71,8 @@ def fund():  # put application's code here
     return render_template("fund.html")
 
 
+
+
 """
 Dynamic Pages
 
@@ -83,3 +89,22 @@ def task(id):
     singleTask = tasks.find_one(ObjectId(id))
 
     return render_template("task.html", singleTask=singleTask, logs=logs, people=people)
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    return "Not Implemented"
+
+@app.route('/new_user', methods=['GET', 'POST'])
+def new_user():
+    if request.method == "GET":
+        return render_template("new_user.html")
+    elif request.method == "POST":
+        print(request.form)
+        if create_new_user(request.form, db):
+            return "Created New User"
+        else:
+            print(request.form)
+            return "Unable to create new user"
+    else:
+        return "BAD REQUEST"
