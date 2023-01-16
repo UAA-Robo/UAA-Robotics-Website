@@ -11,78 +11,52 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
-    <body class="flex flex-wrap leading-normal tracking-normal bg-cover text-black" >
-        
-        
-            
-            <!--Left Panel-->
-            <aside class="flex flex-wrap md:fixed w-full md:h-screen md:w-1/5 p-5 bg-gray-200 shadow-lg">
-                Stuff Here
-            </aside>
-            <!--Main Body-->
-            <div class="flex flex-wrap ml-auto mb-auto w-full md:w-4/5 p-5 items-start justify-start">
-                
-                <h1 class="text-3xl w-full">Tasks</h1>
-                <div class = "w-full">
-                    {% for task in tasks.find() %}
-                        
-                        <!--Progress Color-->
-                   
-                        <div class="flex flex-wrap w-full my-5 p-5 border-2 rounded-lg ">
-                            <div class="flex flex-wrap md:justify-between w-full">
-                                <!--Title-->
-                                <a href="{{ url_for('task', id=task['_id']) }}" class="text-2xl w-full md:w-auto hover:underline" >{{ task["Title"] }} </a>
-                                <!--Progress-->
-                                <div class ="flex md:justify-end items-center">
-                                    {% if task["Status"] == "not-started" %}
-                                    <p class="w-max px-2 py-1 text-center rounded-full bg-gray-200 ">{{ task["Status"] }}</p>
-                                    {% endif %}
+    <body>
+        <!--
 
-                                    {% if task["Status"] == "in-progress" %}
-                                    <p class="w-max px-2 py-1 text-center rounded-full bg-yellow-200 ">{{ task["Status"] }}</p>
-                                    {% endif %}
-
-                                    {% if task["Status"] == "bottlenecked" %}
-                                    <p class="w-max px-2 py-1 text-center rounded-full bg-red-200 ">{{ task["Status"] }}</p>
-                                    {% endif %}
-
-                                    {% if task["Status"] == "complete" %}
-                                    <p class="w-max px-2 py-1 text-center rounded-full bg-green-200 ">{{ task["Status"] }}</p>
-                                    {% endif %}
-
-                                    {% if task["Status"] == "reoccurring" %}
-                                    <p class="w-max px-2 py-1 text-center rounded-full bg-blue-200 ">{{ task["Status"] }}</p>
-                                    {% endif %}
-
-
-                                </div>
-                            </div>
-
-                            <!--Date-->
-                            <p class="w-full text-gray-600">{{ (task["DateCreated"]).strftime("%d %B %Y") }} </p>
-                            <!--Description-->
-                            <p class="w-full">{{ task["DOD"] }}</p>
-                            <!--Teams-->
-                            <div class="flex flex-wrap w-full">
-                                {% for eachTeam in task["Team"]%}
-                                    <p class="w-max px-2 my-0.5 mr-2 text-center border-2 rounded-full bg-gray-200 ">{{eachTeam}}</p>
-                                {% endfor %}
-                            </div>
-
-
-                        </div>
-                    {% endfor %}  
-
-
-                    <!--Alternative test queries using customer db-->
-                    <!--
-                    {% for customers in people.find() %}
-                    <p> Name: {{ customers["name"] }} {{ customers["address"] }} | UAA ID: {{ customers["username"] }}</p>
-                    {% endfor %}  
-                    -->
-                </div>
-
-            </div>
+         <!--Left Panel -->
+        <aside class="flex flex-wrap md:fixed w-full md:h-screen md:w-1/5 p-5 bg-gray-200 shadow-lg">
+            Stuff Here
+        </aside>
+        <!--Main Body-->
+        <div class="flex flex-wrap ml-auto mb-auto w-full md:w-4/5 p-5 items-start justify-start">
+            <table class="table-auto rounded-lg bg-white outline outline-offset-4">
+                <thead>
+                    <tr>
+                        <th>Created</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th>Student</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for task in tasks.find()%}
+                    <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                        <td>{{task["Deadline"]}}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{task["Title"]}}</td>
+                        <td>{{task["DOD"]}}</td>
+                        <td>
+                            <select name="Status" id="Status">
+                                <option value="{{task["Status"]}}" selected>{{task["Status"]}}</option>
+                                {%for option in options%}
+                                {%if option != task["Status"]%}
+                                <option onchange="/" value="{{option}}">{{option}}</option>
+                                {%endif%}
+                                {%endfor%}
+                            </select>
+                        </td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+            <!--Alternative test queries using customer db-->
+            <!--
+    {% for customers in people.find() %}
+    <p> Name: {{ customers["name"] }} {{ customers["address"] }} | UAA ID: {{ customers["username"] }}</p>
+    {% endfor %}
+    -->
+        </div>
 
 
     </body>

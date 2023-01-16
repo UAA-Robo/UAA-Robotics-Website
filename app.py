@@ -73,7 +73,8 @@ Dynamic Pages
 
 @app.route("/task_listing", methods = ["GET"])
 def task_listing():  # put application's code here
-    return render_template("task_listing.html", people = people, tasks = tasks) 
+    options = ["open", "in-progress", "stalled", "complete", "recurring"]
+    return render_template("task_listing.html", people = people, tasks = tasks, options=options) 
 
 
 @app.route("/tasks/<string:id>", methods = ["GET"])
