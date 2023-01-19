@@ -89,15 +89,15 @@
       </nav>
 
     <!--Main-->
-      <div class="w-full flex block flex-grow flex-wrap w-auto">
+      <div class="w-full flex block flex-grow flex-wrap w-auto m-4">
       
-      <!--Right Sidebar with current sponsors-->
-      <div class = "flex w-full md:w-1/4 md:fixed p-4 justify-center md:top-15 md:right-0 md:bottom-15">
+      <!--Left Sidebar with current sponsors-->
+      <div class = "flex w-full md:w-1/4 justify-center">
         <div class = "bg-amber-400 p-4 rounded shadow-lg justify-center">
           <h class = "text-xl font-bold">
             Thank you to our 2022-2023 sponsors!
           </h>
-          <img class=" bject-fit w-1/2 md:w-full pt-3 mx-auto" src="sponsors/beadedStream.png" alt="beadedstream">
+          <img class="object-fit w-1/2 md:w-full pt-3 mx-auto" src="sponsors/beadedStream.png" alt="beadedstream">
           <img class="object-fit w-1/2 md:w-full pt-3 mx-auto" src="sponsors/coffman.png" alt="Coffman">
           <ul class="list-none pt-5 text-center">
             <li>Antonio Pennell</li>
@@ -111,104 +111,107 @@
             <li>Virginia & Mark Groeschel</li>
           </ul>
         </div>
-        </div>
+      </div>
         
-        <!--Left Body-->
-        <div class = "flex flex-wrap w-full md:w-3/4 p-10">
-          <div class="flex flex-wrap w-full text-white">
-            <p class = "w-full text-lg">
-              Our team has been busy designing and building two robots for the VEX U competitions. 
-              We will be ready to go to competitions once we raise the funds.
-              The following amounts of funding this season will determine what we are able to accomplish:
-            </p>
+      
+      <!--General info-->
+      <div class = "flex md:w-3/4">
+        <div class="w-full p-10 text-white">
+          <p class = "w-full text-lg">
+            Our team has been busy designing and building two robots for the VEX U competitions. 
+            We will be ready to go to competitions once we raise the funds.
+            The following amounts of funding this season will determine what we are able to accomplish:
+          </p>
 
+        <!--Table for $ goal-->
+        <table class="table-auto mt-10 text-white text-left">
+          <thead class="border-b">
+            <tr>
+              <th class="pr-8">Amount (cumulative)</th>
+              <th>Impact (all lower tiers include the impact of those above)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b">
+              <td class="py-5">$8,000</td>
+              <td class="py-5">Allow 9 members to travel to the Tiger Town Throwdown in Clemson, South Carolina (February 4th, 2023).</td>
+            </tr>
+            <tr class="border-b">
+              <td class="py-5">$15,000</td>
+              <td class="py-5">Allow 9 members to travel to the Illini Cornfield Clash in Champaign, Illinois (VEX U) (March 4th 2023).</td>
+            </tr>
+            <tr class="border-b">
+              <td class="py-5">$25,000</td>
+              <td class="py-5">Allow 9 members to travel to the 2022 VEX Robotics World Championship in Dallas, Texas (April 27th-29th, 2023).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
-          <!--Table for $ goal-->
-          <table class="table-auto m-10 text-white text-left">
-            <thead class="border-b">
-              <tr>
-                <th class="pr-8">Amount (cumulative)</th>
-                <th>Impact (all lower tiers include the impact of those above)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="border-b">
-                <td class="py-5">$8,000</td>
-                <td class="py-5">Allow 9 members to travel to the Tiger Town Throwdown in Clemson, South Carolina (February 4th, 2023).</td>
-              </tr>
-              <tr class="border-b">
-                <td class="py-5">$15,000</td>
-                <td class="py-5">Allow 9 members to travel to the Illini Cornfield Clash in Champaign, Illinois (VEX U) (March 4th 2023).</td>
-              </tr>
-              <tr class="border-b">
-                <td class="py-5">$25,000</td>
-                <td class="py-5">Allow 9 members to travel to the 2022 VEX Robotics World Championship in Dallas, Texas (April 27th-29th, 2023).</td>
-              </tr>
-            </tbody>
-          </table>
+      <!-- Progress Bar (https://flowbite.com/docs/components/progress/)-->
+      <div class="w-full py-5 pt-10 text-4xl text-white">
+        $25,000 <span class="text-base text-gray-300">goal for competition travel</span>
+      </div>
 
-            <!-- Progress Bar (https://flowbite.com/docs/components/progress/)-->
-            <p class="w-full py-5 text-4xl text-white">
-              $25,000 <span class="text-base text-gray-300">goal for competition travel</span>
-            </p>
+      <div class="flex w-full bg-gray-200 rounded-full h-10 md:h-7 items-center ">
+        <div class="bg-amber-400 h-10 md:h-7 p-1 rounded-full text-xs text-white text-center items-center" style="width: 20%">20% reached</div>
+      </div>
+   
 
-            <div class="w-full bg-gray-200 rounded-full h-10 md:h-7 items-center ">
-              <div class="bg-amber-400 h-10 md:h-7 p-1 rounded-full text-xs text-white text-center items-center" style="width: 20%">20% reached</div>
-            </div>
-          </div>
           
-          <!--Support Us-->
-          <div class="w-full bg-black my-10 p-5 rounded-lg">
-            <h1 class="w-full text-4xl text-white"> Support Us</h>
-            <h1 class="w-full text-xl text-amber-400">Monetary Funds</h1>
-            <p class ="w-full text-white">
-              You can donate online to us through the University of Alaska Foundation by going to 
-              <a href="https://bit.ly/uaaroboticssupport" class ="underline text-amber-400" target="_blank"> https://bit.ly/uaaroboticssupport</a>.
-              Check donations may be mailed to the UA Foundation 
-              at 1815 Bragaw St., Ste. 206 Anchorage, AK 99508. 
-              Checks should be made payable to the UA Foundation and 
-              “UAA Robotics Academic Support” should be noted in the check memo. 
-              <br><br>
-              Your monetary gift will be receipted by the University of Alaska Foundation and is 
-              <b>tax-deductible to the extent allowed by law</b>. 
-              Feel free to reach out to 
-              <a href="mailto:uaa_icebergrobotics@alaska.edu" class ="underline"> uaa_icebergrobotics@alaska.edu</a> 
-              with any questions or comments.
-              <br><br>
-            </p>
-  
-            <h1 class="w-full text-xl text-amber-400">Donations In-Kind</h1>
-            <p class ="w-full text-white">
-              Donations in-kind are a special form of donation. 
-              If you are giving a good or service, the process for acceptance is a bit different. 
-              Please email a summary of the gift to be provided to 
-              <a href="mailto:uaa_icebergrobotics@alaska.edu" class ="underline"> uaa_icebergrobotics@alaska.edu</a>. 
-              An authorized UAA representative must formally accept your gift in order for it to be official.
-              <br><br>
-              As a means of practical application, your gift summary will be submitted to a club representative or the club faculty sponsor (Dr. Masoumeh Heidari). 
-              Dr. Heidari, or another authorized representative, will accept the gift if it meets the internal requirements for UAA 
-              (e.g. the gift is needed and we have a place to store the product).
-              <br><br>
-              From there you are free to give the gift, track its value, and UAA will follow up with a notice of acceptance. 
-              UAA will not appraise your gift – it is your responsibility to track the value of the goods or services provided.
-  
-              Your monetary gift will be receipted by the University of Alaska Foundation and is 
-              <b>tax-deductible to the extent allowed by law</b>. 
-              Feel free to reach out to 
-              <a href="mailto:uaa_icebergrobotics@alaska.edu" class ="underline"> uaa_icebergrobotics@alaska.edu</a> 
-              with any questions or comments.
-              <br><br>
-            </p>
+      <!--Support Us-->
+      <div class="w-full bg-black my-10 p-5 rounded-lg">
+        <h1 class="w-full text-4xl text-white"> Support Us</h>
+        <h1 class="w-full text-xl text-amber-400">Monetary Funds</h1>
+        <p class ="w-full text-white">
+          You can donate online to us through the University of Alaska Foundation by going to 
+          <a href="https://bit.ly/uaaroboticssupport" class ="underline text-amber-400" target="_blank"> https://bit.ly/uaaroboticssupport</a>.
+          Check donations may be mailed to the UA Foundation 
+          at 1815 Bragaw St., Ste. 206 Anchorage, AK 99508. 
+          Checks should be made payable to the UA Foundation and 
+          “UAA Robotics Academic Support” should be noted in the check memo. 
+          <br><br>
+          Your monetary gift will be receipted by the University of Alaska Foundation and is 
+          <b>tax-deductible to the extent allowed by law</b>. 
+          Feel free to reach out to 
+          <a href="mailto:uaa_icebergrobotics@alaska.edu" class ="underline"> uaa_icebergrobotics@alaska.edu</a> 
+          with any questions or comments.
+          <br><br>
+        </p>
+
+        <h1 class="w-full text-xl text-amber-400">Donations In-Kind</h1>
+        <p class ="w-full text-white">
+          Donations in-kind are a special form of donation. 
+          If you are giving a good or service, the process for acceptance is a bit different. 
+          Please email a summary of the gift to be provided to 
+          <a href="mailto:uaa_icebergrobotics@alaska.edu" class ="underline"> uaa_icebergrobotics@alaska.edu</a>. 
+          An authorized UAA representative must formally accept your gift in order for it to be official.
+          <br><br>
+          As a means of practical application, your gift summary will be submitted to a club representative or the club faculty sponsor (Dr. Masoumeh Heidari). 
+          Dr. Heidari, or another authorized representative, will accept the gift if it meets the internal requirements for UAA 
+          (e.g. the gift is needed and we have a place to store the product).
+          <br><br>
+          From there you are free to give the gift, track its value, and UAA will follow up with a notice of acceptance. 
+          UAA will not appraise your gift – it is your responsibility to track the value of the goods or services provided.
+
+          Your monetary gift will be receipted by the University of Alaska Foundation and is 
+          <b>tax-deductible to the extent allowed by law</b>. 
+          Feel free to reach out to 
+          <a href="mailto:uaa_icebergrobotics@alaska.edu" class ="underline"> uaa_icebergrobotics@alaska.edu</a> 
+          with any questions or comments.
+          <br><br>
+        </p>
 
 
-            <h1 class="w-full text-xl text-amber-400">Recognition</h1>
-            <p class ="w-full text-white">
-              If you would like, we would be happy to recognize your donation by putting your name or company logo on our website 
-              and on the shirts and robots that we will bring to competitions. 
-              If you would like your name/logo on our shirt, please make sure to let us know you are donating by 1/1/2023 
-              so that we have time to print our shirts before our first competition. 
-            </p>
-          </div>
+        <h1 class="w-full text-xl text-amber-400">Recognition</h1>
+        <p class ="w-full text-white">
+          If you would like, we would be happy to recognize your donation by putting your name or company logo on our website 
+          and on the shirts and robots that we will bring to competitions. 
+          If you would like your name/logo on our shirt, please make sure to let us know you are donating by 1/1/2023 
+          so that we have time to print our shirts before our first competition. 
+        </p>
+      </div>
 
 
     
@@ -299,7 +302,7 @@
               </div>
             </div>
           </div>
-        </div>
+
         
 
 
