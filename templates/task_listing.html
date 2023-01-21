@@ -37,14 +37,16 @@
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{task["Title"]}}</td>
                         <td>{{task["DOD"]}}</td>
                         <td>
+                        <form action="task_listing.html" method="post">
                             <select name="Status" id="Status">
                                 <option value="{{task["Status"]}}" selected>{{task["Status"]}}</option>
                                 {%for option in options%}
                                 {%if option != task["Status"]%}
-                                <option onchange="/" value="{{option}}">{{option}}</option>
+                                <option onchange="form.this.submit()" value="{{option}}">{{option}}</option>
                                 {%endif%}
                                 {%endfor%}
                             </select>
+                        </form>
                         </td>
                     </tr>
                     {%endfor%}
