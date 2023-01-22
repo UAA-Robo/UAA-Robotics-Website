@@ -14,7 +14,7 @@
     <body>
         <!--
 
-         <!--Left Panel -->
+         <!- -Left Panel -->
         <aside class="flex flex-wrap md:fixed w-full md:h-screen md:w-1/5 p-5 bg-gray-200 shadow-lg">
             Stuff Here
         </aside>
@@ -37,15 +37,16 @@
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{task["Title"]}}</td>
                         <td>{{task["DOD"]}}</td>
                         <td>
-                        <form action="task_listing.html" method="post">
-                            <select name="Status" id="Status">
+                        <form action="/task_listing" method="post" id="statsub">
+                            <select name="Status" id="Status" class="Status">
                                 <option value="{{task["Status"]}}" selected>{{task["Status"]}}</option>
                                 {%for option in options%}
                                 {%if option != task["Status"]%}
-                                <option onchange="form.this.submit()" value="{{option}}">{{option}}</option>
+                                <option value="{{option}}">{{option}}</option>
                                 {%endif%}
                                 {%endfor%}
                             </select>
+                            <input hidden="hidden" value="{{ task["_id"]}}" name="ObjectID">
                         </form>
                         </td>
                     </tr>
@@ -54,12 +55,23 @@
             </table>
             <!--Alternative test queries using customer db-->
             <!--
-    {% for customers in people.find() %}
-    <p> Name: {{ customers["name"] }} {{ customers["address"] }} | UAA ID: {{ customers["username"] }}</p>
-    {% endfor %}
-    -->
-        </div>
+                {% for customers in people.find() %}
+                <p> Name: {{ customers["name"] }} {{ customers["address"] }} | UAA ID: {{ customers["username"] }}</p>
+                {% endfor %}
+            -->
+    </div>
 
+    <script type="text/javascript">
+        var options = document.getElementsByClassName("Status");
 
+        for(let i = 0; i < options.length; i++){
+            options[i].addEventListener("change", function(){
+            var form = this.closest("form");
+
+            form.submit();
+            })
+        }
+
+    </script>
     </body>
 </html>

@@ -1,5 +1,5 @@
 import configparser
-from flask import Flask, url_for, render_template, send_from_directory, redirect, render_template
+from flask import Flask, url_for, render_template, send_from_directory, redirect, render_template, request
 from flask_session import Session
 from tempfile import mkdtemp
 from pymongo import MongoClient
@@ -71,10 +71,15 @@ Dynamic Pages
 
 """
 
-@app.route("/task_listing", methods = ["GET"])
+@app.route("/task_listing", methods = ["GET", "POST"])
 def task_listing():  # put application's code here
-    options = ["open", "in-progress", "stalled", "complete", "recurring"]
-    return render_template("task_listing.html", people = people, tasks = tasks, options=options) 
+    if request.method=="GET":
+        options = ["open", "in-progress", "stalled", "complete", "recurring"]
+        return render_template("task_listing.html", people = people, tasks = tasks, options=options)
+    ID = request.form.get("ObjectID")
+    updatedStatus = request.form.get("Status")
+
+    return redirect("task_listing")
 
 
 @app.route("/tasks/<string:id>", methods = ["GET"])
