@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>UAA Robotics</title>
+    <meta name="description" content="About UAA Iceberg Robotics" />
+    <meta name="keywords" content="UAA, Iceberg, Robotics, Alaska, Anchorage, University" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .hide-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    </style>
+
+
+  </head>
+
+  <body class="leading-normal tracking-normal bg-cover bg-teal-900" > <!--style="background-image: url('background.png');" --> 
+
+
+      <!--Nav-->
+      <nav class="flex items-center justify-between flex-wrap px-6">
+        <div class="flex items-center mx-auto pl-8">
+          <a href="index.html">
+            <!--UAA <span class="bg-clip-text text-white ">Robotics</span> -->
+            <img class="object-fit w-48" src="roboLogo.png" alt="Robotics Logo">
+          </a>
+        </div>
+
+        <!-- Hamburger button that can be used later w/ python/js
+        <div class="block lg:hidden">
+          
+          <button class="flex items-center px-3 py-2 border rounded text-white hover:text-yellow-300 hover:border-yellow-300">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+          </button>
+          
+        </div>
+        -->
+        <div class="w-full block flex-grow sm:ml-16 flex items-center w-auto">
+          <div class="text-sm flex-grow font-mono menlo">
+            <a href="projects.html" class="block mt-4 inline-block sm:mt-0 text-white hover:text-yellow-300 mr-4">
+              Projects
+            </a>
+            <a href="outreach.html" class="block mt-4 inline-block sm:mt-0 text-white hover:text-yellow-300 mr-4">
+              Outreach
+            </a>
+            <a href="fund.html" class="block mt-4 inline-block sm:mt-0 text-white hover:text-yellow-300">
+              Funding
+            </a>
+          </div>
+          
+          <div class="flex  sm:justify-end content-center mt-4 sm:mt-0">
+            <a class="inline-block text-cyan-300 hover:text-yellow-300 h-6  p-1  transform hover:scale-125 duration-300 ease-in-out" 
+            href="mailto:uaa_icebergrobotics@alaska.edu">
+              <svg class="h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              </svg>
+            </a>
+
+            <a class="inline-block text-cyan-300 hover:text-yellow-300 h-6 p-1 transform hover:scale-125 duration-300 ease-in-out" 
+            href="https://www.linkedin.com/company/uaarobotics/" target="_blank">
+            <svg class="h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" fill ="currentColor" >
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            </a>
+
+            <a class="inline-block text-cyan-300 hover:text-yellow-300  h-6 p-1 transform hover:scale-125 duration-300 ease-in-out" 
+            href="https://www.youtube.com/channel/UCvZvZTJamj-XVv0YwWK5Qcw" target="_blank">
+            <svg class="h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="h-6">
+              <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+            </svg>
+            </a>
+
+            
+            <a class="inline-block text-cyan-300 hover:text-yellow-300 h-6 p-1 transform hover:scale-125 duration-300 ease-in-out" 
+            href="https://twitter.com/uaarobotics" target="_blank">
+              <svg class="fill-current h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" >
+                <path
+                  d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"
+                ></path>
+              </svg>
+            </a>
+
+            <a
+              class="inline-block text-cyan-300 hover:text-yellow-300 h-6 p-1 transform hover:scale-125 duration-300 ease-in-outt"
+              href="https://www.facebook.com/UAARobotics/" target="_blank">
+              <svg class="fill-current h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" >
+                <path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+
+
+      <!--Main-->
+      <div class=" flex flex-wrap flex-col md:flex-row  content-center mt-10">
+
+        <!--Video/Intro Banner-->
+        <div class="relative flex-col w-full h-96  overflow-hidden flex-row grow ">
+          
+          <div class="absolute z-30 flex w-3/4 md:w-2/5 align-middle flex flex-col pl-5 py-20  overflow-y-hidden">
+            <h1 class="my-4 text-4xl md:text-5xl text-cyan-900 align-middle  opacity-75 font-bold leading-tight">
+              Welcome to
+              <span class="bg-clip-text text-transparent bg-gradient-to-r from-teal-900 via-green-600 to-yellow-500">
+                UAA Iceberg Robotics
+              </span>
+              ...
+            </h1>
+            <p class="leading-normal text-base text-cyan-900 text-3xl">
+              Qualified for the <b> 2023 VEX U World Championship</b> as ICE1!
+            </p>
+          </div>
+          
+
+          <div class="absolute top-0 right-0 flex w-full h-full">
+            <div class="w-1/3 h-full bg-gray-100"></div>
+            <div class="relative w-1/3">
+              <svg
+                fill="currentColor"
+                viewBox="0 0 100 100"
+                class="absolute inset-y-0 z-20 h-full text-gray-100"
+              >
+                <polygon id="diagonal" points="0,0 100,0 50,100 0,100"></polygon>
+              </svg>
+              <svg
+                fill="currentColor"
+                viewBox="0 0 100 100"
+                class="absolute inset-y-0 z-10 h-full ml-6 text-white opacity-50"
+              >
+                <polygon points="0,0 100,0 50,100 0,100"></polygon>
+              </svg>
+            </div>
+          </div>
+
+          <div class="absolute w-3/5 top-0 right-0  h-full">
+            <video autoplay loop muted class="w-full  min-h-full absolute object-cover">
+              <source src="bot.mp4" type="video/mp4"/>
+              Robotic driving
+            </video>
+          </div>
+    
+        </div>
+
+
+        <!--Promo Video-->
+        <div class = "flex flex-wrap w-full md:w-1/2 p-5 my-10 text-white">
+          <iframe class="object-contain w-full aspect-video rounded-lg"
+          src="https://youtube.com/embed/Scd6czB4dJc?autoplay=1&mute=1">
+          </iframe>
+      </div>
+
+
+
+
+   
+
+        <!--About us blurb-->
+        <div class="flex items-center w-full md:w-1/2 p-12 md:my-5 overflow-hidden">
+          <p class="pl-10 text-white text-xl md:text-xl lg:text-2xl  border-4 border-l-white border-transparent rounded-sm">
+            <span class = "">We are </span>
+            <span class = "text-cyan-300 font-bold " >UAA's College Robotics Team</span>
+            <span class = ""> in Anchorage, Alaska.</span>
+            <span class="">We embrace all types of creativity.</span> 
+            <span class = "">If you're interested in </span>
+            <span class = "text-amber-400 font-bold"> robotics, engineering, programming, marketing, or project management, </span>
+            <span class = "">we're the place for you!</span>
+            <span class = "">You don't have to know anything about robotics to join us.</span>
+            <span class = "text-cyan-300 font-bold ">You just have to be willing to learn!</a>
+            </span>
+        </div>
+
+
+        <div class = "flex flex-wrap bg-black w-full">
+
+          <!--Covid bounce-back-->
+          <div class="flex items-center w-full md:w-3/5  md:my-5 overflow-hidden ">
+            <p class="p-10 text-white text-xl md:text-xl lg:text-2xl rounded-md bg-black">
+              During the pandemic, the club came to a standstill and most of the robotics members graduated, taking their knowledge with them. 
+              We’ve had to start from square one this season. However, with the support of our fellow students across many different majors (engineering, computer science, business, etc) 
+              we’ve been able to grow club membership from less than 5 to over 20 members.  
+              Now we have a team of committed members ready to build robots and win competitions.
+            </p>
+          </div>
+
+         <!--Meeting location/time-->
+          <div class="flex items-center w-full md:w-2/5 p-5 my-10" >
+            <a class = "w-full text-white" href="https://goo.gl/maps/ww8NQvasEESDBqcA9" target="_blank">
+              
+              <div class = "flex justify-center w-full">
+                <svg class="w-20 h-20 p-2 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+              </div>
+
+              <div class="text-center hover:text-underline transform hover:scale-105 duration-300 ease-in-out">
+                <p class="font-bold text-3xl md:text-5xl ">5pm Friday Meetings<br> <br> </p>
+                <p class="text-base">UAA Engineering and Industry Building: <br> Robotics Innovation Lab (<b>316</b>)</p> 
+              </div>
+            </a>
+          </div>
+      </div>
+
+        <!--Images-->
+        <div class="flex overflow-x-scroll hide-scrollbar mt-10"> <!--hide-scrollbar is NOT tailwind-->
+            <img class="m-4 w-96 object-contain rounded-lg inline-block" src="teamPics/1.png" alt="Team members working on the VEX Robot">
+            <img class="m-4 w-96 object-contain rounded-lg inline-block" src="teamPics/2.png" alt="Team members programming">
+            <img class="m-4 w-96 object-contain rounded-lg inline-block" src="teamPics/3.png" alt="Team members working on the VEX Robot">
+            <img class="m-4 w-96 object-contain rounded-lg inline-block" src="teamPics/4.png" alt="Team members working on the VEX Robot">
+            <img class="m-4 w-96 object-contain rounded-lg inline-block" src="teamPics/5.png" alt="Team members">
+        </div>
+
+
+
+      <!--statistics-->
+        <div class="flex flex-wrap w-full p-4 mt-10   bg-yellow-500 text-white ">
+          <div class="px-5 flex w-full  text-white text-4xl font-bold">Stats</div>
+          <div class=" flex w-full flex-wrap text-yellow-500 font-bold rounded-lg">
+            <div class="m-4 p-4 rounded-full bg-white "> 20+ members</div>
+            <div class="m-4 p-4 rounded-full bg-white"> 50+ Alumni </div>
+            <div class="m-4 p-4 rounded-full bg-white">7 years</div>
+            <div class="m-4 p-4 rounded-full bg-white">4 Robots</div>
+            <div class="m-4 p-4 rounded-full bg-white">∞ Great Experiences</div>
+          </div>
+
+        </div>
+
+        
+
+        <!--Footer-->
+        <p class="w-full mt-10 text-sm text-center text-white">
+         Website created in-house by the 2022/2023 UAA Robotics Web Development Team</p>
+        </p>
+        
+      </div>
+
+
+  </body>
+</html>
