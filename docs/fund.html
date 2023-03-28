@@ -105,36 +105,53 @@
 
 
     <!--Main-->
-      <div class="flex flex-wrap flex-col md:flex-row  content-center m-10">
+      <div class="flex flex-wrap flex-col md:flex-row content-center mt-10 sm:mt-0 mx-10 mb-10">
       
       <!--Left Sidebar with current sponsors-->
       <div class = "flex w-full md:w-1/4 justify-center">
-        <div class = "bg-amber-400 p-4 rounded shadow-lg justify-center">
-          <h class = "text-xl font-bold text-center justify-center">
+        <div class = "flex flex-wrap bg-white  p-4 rounded-lg shadow-lg justify-center">
+          <h class = "text-2xl font-bold text-center">
             Thank you to our 2022-2023 sponsors!
           </h>
-          <img class="object-fit w-1/2 md:w-full pt-3 mx-auto" src="sponsors/alaskaAirlines.png" alt="Alaska Airlines">
-          <img class="object-fit w-1/2 md:w-full pt-3 mx-auto" src="sponsors/beadedStream.png" alt="beadedstream">
-          <img class="object-fit w-1/2 md:w-full pt-3 mx-auto" src="sponsors/coffman.png" alt="Coffman">
-          <ul class="list-none pt-5 text-center">
-            <li>Antonio Pennell</li>
-            <li>Billy Redman</li>
-            <li>Erik Williams</li>
-            <li>Jacobo Franco</li>
-            <li>Jayna & Sam Combs</li>
-            <li>Melissa Delcarpio</li>
-            <li>Robert & Melissa Branch</li>
-            <li>Sean Gwaltney</li>
-            <li>Steven & Jennifer Buchanan</li>
-            <li>Virginia & Mark Groeschel</li>
-          </ul>
+          <img class="flex m-4 w-1/2 md:w-96 mx-auto" src="sponsors/alaskaAirlines.png" alt="Alaska Airlines">
+          <img class="flex m-4 w-1/2 md:w-96 mx-auto" src="sponsors/beadedStream.png" alt="beadedstream">
+          <img class="flex m-4 w-1/2 md:w-96 mx-auto" src="sponsors/coffman.png" alt="Coffman">
+          <p class = "pt-5 text-center">
+            Antonio Pennell | 
+            Billy Redman | 
+            Erik Williams | 
+            Jacobo Franco | 
+            Jayna & Sam Combs | 
+            Melissa Delcarpio | 
+            Robert & Melissa Branch | 
+            Sean Gwaltney | 
+            Steven & Jennifer Buchanan | 
+            Virginia & Mark Groeschel 
+          </p>
         </div>
       </div>
-        
+
+      <!--Top right column-->
+      <div class = "flex flex-wrap md:w-3/4">
+      <!--Merch-->
+      <div class = "flex w-full ">
+        <div class="flex w-full bg-white md:ml-5 md:mt-0 mt-5 p-10 rounded-lg items-center">
+          <div class="w-full md:w-1/2 mr-2">
+            <p class ="text-black text-4xl font-bold">
+              We have merch! Purchase it
+              <a href="https://my-store-d8eb7d.creator-spring.com/" class ="underline text-amber-400" target="_blank">here</a> 
+              to support us.
+            </p>
+          </div>
+          <div class="md:w-1/2 w-full">
+            <img class="m-4 w-96 rounded-lg mx-auto" src="fundPics/tshirt.png" alt="Team members working on the VEX Robot">
+          </div>
+        </div>
+      </div> 
       
       <!--General info-->
-      <div class = "flex md:w-3/4">
-        <div class="w-full p-10 text-white">
+      <div class = "flex  w-full">
+        <div class = "flex flex-wrap bg-white p-4 md:ml-5 mt-5 rounded-lg shadow-lg justify-center">
           <p class = "w-full text-lg">
             Our team has been busy designing and building two robots for the VEX U competitions. 
             We will be ready to go to competitions once we raise the funds.
@@ -142,7 +159,7 @@
           </p>
 
         <!--Table for $ goal-->
-        <table class="table-auto mt-10 text-white text-left">
+        <table class="table-auto mt-10 text-black text-left">
           <thead class="border-b">
             <tr>
               <th class="pr-8">Amount (cumulative)</th>
@@ -163,22 +180,24 @@
       </div>
     </div>
 
+  </div>
+
       <!-- Progress Bar (https://flowbite.com/docs/components/progress/)-->
       <div class="w-full py-5 pt-10 text-4xl text-white">
         $18,000 <span class="text-base text-gray-300">goal for competition travel</span>
       </div>
 
-      <div class="flex w-full bg-gray-200 rounded-full h-10 md:h-7 items-center ">
-        <div class="bg-amber-400 h-10 md:h-7 p-1 rounded-full text-xs text-white text-center items-center" style="width: 45%">45% reached</div>
+      <div class="flex w-full bg-gray-200 rounded-full h-10 md:h-7 items-center">
+        <div class="flex items-center my-auto pl-32 bg-amber-400 h-10 md:h-7 p-1 rounded-full text-xs text-white text-center " style="width: 45%">45% reached</div>
       </div>
    
 
           
       <!--Support Us-->
-      <div class="w-full bg-black my-10 p-5 rounded-lg">
-        <h1 class="w-full text-4xl text-white"> Support Us</h>
+      <div class="w-full bg-white my-10 p-5 rounded-lg">
+        <h1 class="w-full text-4xl"> Tax-Deductable Support</h>
         <h1 class="w-full text-xl text-amber-400">Monetary Funds</h1>
-        <p class ="w-full text-white">
+        <p class ="w-full">
           You can donate online to us through the University of Alaska Foundation by going to 
           <a href="https://bit.ly/uaaroboticssupport" class ="underline text-amber-400" target="_blank"> https://bit.ly/uaaroboticssupport</a>.
           Check donations may be mailed to the UA Foundation 
@@ -195,7 +214,7 @@
         </p>
 
         <h1 class="w-full text-xl text-amber-400">Donations In-Kind</h1>
-        <p class ="w-full text-white">
+        <p class ="w-full">
           Donations in-kind are a special form of donation. 
           If you are giving a good or service, the process for acceptance is a bit different. 
           Please email a summary of the gift to be provided to 
@@ -219,7 +238,7 @@
 
 
         <h1 class="w-full text-xl text-amber-400">Recognition</h1>
-        <p class ="w-full text-white">
+        <p class ="w-full">
           If you would like, we would be happy to recognize your donation by putting your name or company logo on our website 
           and on the shirts and robots that we will bring to competitions. 
           If you would like your name/logo on our shirt, please make sure to let us know you are donating by 1/1/2023 
