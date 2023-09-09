@@ -5,20 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>UAA Robotics</title>
-    <meta name="description" content="UAA Robotics Funding" />
-    <meta name="keywords" content="funding, sponsors, bakesales, events, UAA, Iceberg, Robotics" />
+    <meta name="description" content="About UAA Iceberg Robotics" />
+    <meta name="keywords" content="UAA, Iceberg, Robotics, Alaska, Anchorage, University" />
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .hide-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    </style>
 
 
   </head>
 
   <body class="leading-normal tracking-normal bg-cover bg-teal-900" > <!--style="background-image: url('background.png');" --> 
 
-      <!--Nav-->
 
+      <!--Nav-->
       <nav class="flex items-center justify-between flex-wrap px-6">
-        <div class="flex items-center mx-auto pl-8">
+        
+        <div class="sm:w-2/12 flex items-center mx-auto pl-2">
           <a href="index.html">
             <!--UAA <span class="bg-clip-text text-white ">Robotics</span> -->
             <img class="object-fit w-48" src="roboLogo.png" alt="Robotics Logo">
@@ -34,8 +47,8 @@
           
         </div>
         -->
-        <div class="w-full block flex-grow sm:ml-16 flex items-center w-auto">
-          <div class="text-sm flex-grow font-mono menlo">
+        <div class="w-full flex-wrap block sm:w-7/12 flex-grow sm:ml-6 flex items-center w-auto">
+          <div class="text-base flex-grow menlo" style="font-size: 1.5rem;">
             <a href="projects.html" class="block mt-4 inline-block sm:mt-0 text-white hover:text-yellow-300 mr-4">
               Projects
             </a>
@@ -47,7 +60,7 @@
             </a>
           </div>
           
-          <div class="flex  sm:justify-end content-center mt-4 sm:mt-0">
+          <div class="flex w-full sm:w-3/12 sm:justify-end content-center mt-4 sm:mt-0">
             <a class="inline-block text-cyan-300 hover:text-yellow-300 h-6  p-1  transform hover:scale-125 duration-300 ease-in-out" 
             href="mailto:uaa_icebergrobotics@alaska.edu">
               <svg class="h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
@@ -90,84 +103,109 @@
         </div>
       </nav>
 
+
     <!--Main-->
-      <div class="flex flex-wrap flex-col md:flex-row  content-center m-10">
+      <div class="flex flex-wrap flex-col md:flex-row content-center mt-10 sm:mt-0 mx-5 mb-10">
       
       <!--Left Sidebar with current sponsors-->
       <div class = "flex w-full md:w-1/4 justify-center">
-        <div class = "bg-amber-400 p-4 rounded shadow-lg justify-center">
-          <h class = "text-xl font-bold">
-            Thank you to our 2022-2023 sponsors!
+        <div class = "flex flex-wrap bg-white  p-4 rounded-lg shadow-lg justify-center">
+          <h class = "text-2xl font-bold text-center">
+            2023-2024 Sponsors:
+            
           </h>
-          <img class="object-fit w-1/2 md:w-full pt-3 mx-auto" src="sponsors/alaskaAirlines.png" alt="Alaska Airlines">
-          <img class="object-fit w-1/2 md:w-full pt-3 mx-auto" src="sponsors/beadedStream.png" alt="beadedstream">
-          <img class="object-fit w-1/2 md:w-full pt-3 mx-auto" src="sponsors/coffman.png" alt="Coffman">
-          <ul class="list-none pt-5 text-center">
-            <li>Antonio Pennell</li>
-            <li>Billy Redman</li>
-            <li>Erik Williams</li>
-            <li>Jacobo Franco</li>
-            <li>Jayna & Sam Combs</li>
-            <li>Robert & Melissa Branch</li>
-            <li>Sean Gwaltney</li>
-            <li>Steven & Jennifer Buchanan</li>
-            <li>Virginia & Mark Groeschel</li>
-          </ul>
+          <!--<img class="flex m-4 w-1/2 md:w-96 mx-auto" src="" alt=""-->
+          <p class = "pt-5 text-center">
+              None here yet. Consider donating below to support your local team!
+          </p>
         </div>
       </div>
-        
+
+      <!--Top right column-->
+      <div class = "flex flex-wrap md:w-3/4">
+      <!--Merch-->
+      <div class = "flex w-full ">
+        <div class="flex w-full bg-white md:ml-5 md:mt-0 mt-5 p-10 rounded-lg items-center">
+          <div class="flex w-full md:w-1/2 mr-2">
+            <p class ="text-black text-4xl font-bold">
+              We have merch! Purchase it
+              <a href="https://my-store-d8eb7d.creator-spring.com/" class ="underline text-amber-400" target="_blank">here</a> 
+              to support us.
+            </p>
+          </div>
+          <div class="ml-5 flex flex-wrap w-1/2">
+            <div class="flex  w-full lg:w-1/2">
+              <img class=" m-3 w-96 rounded-lg mx-auto" src="fundPics/tshirt.png" alt="Team members working on the VEX Robot">
+            </div>
+            <div class="flex w-full hidden lg:block lg:w-1/2 lg:pl-3"> <!-- This is hidden at small sizes-->
+              <img class=" m-3 w-96 rounded-lg mx-auto" src="fundPics/hoodie.png" alt="Team members working on the VEX Robot">
+            </div>
+          </div>
+        </div>
+      </div> 
       
       <!--General info-->
-      <div class = "flex md:w-3/4">
-        <div class="w-full p-10 text-white">
+      <div class = "flex  w-full">
+        <div class = "flex flex-wrap bg-white p-4 md:ml-5 mt-5 rounded-lg shadow-lg justify-center">
           <p class = "w-full text-lg">
-            Our team has been busy designing and building two robots for the VEX U competitions. 
-            We will be ready to go to competitions once we raise the funds.
+            Our team is ready to build robots and compete in robotics competitions.
             The following amounts of funding this season will determine what we are able to accomplish:
           </p>
 
         <!--Table for $ goal-->
-        <table class="table-auto mt-10 text-white text-left">
+        <table class="table-auto mt-10 text-black text-left">
           <thead class="border-b">
             <tr>
-              <th class="pr-8">Amount (cumulative)</th>
-              <th>Impact (all lower tiers include the impact of those above)</th>
+              <th class="pr-8">Amount </th>
+              <th>Impact </th>
             </tr>
           </thead>
           <tbody>
             <tr class="border-b">
-              <td class="py-5">$8,000</td>
-              <td class="py-5">Allow 9 members to travel to the Tiger Town Throwdown in Clemson, South Carolina (February 4th, 2023).</td>
+              <td class="py-5">$4,000</td>
+              <td class="py-5">Allow us to purchase materials, motors, and sensors to build this season's VEX U robot. </td>
             </tr>
             <tr class="border-b">
-              <td class="py-5">$15,000</td>
-              <td class="py-5">Allow 9 members to travel to the Illini Cornfield Clash in Champaign, Illinois (VEX U) (March 4th 2023).</td>
+              <td class="py-5">$6,000</td>
+              <td class="py-5">Allow ~6 members to travel to a VEX U Qualifying tournament.</td>
             </tr>
             <tr class="border-b">
-              <td class="py-5">$25,000</td>
-              <td class="py-5">Allow 9 members to travel to the 2022 VEX Robotics World Championship in Dallas, Texas (April 27th-29th, 2023).</td>
+              <td class="py-5">$6,000</td>
+              <td class="py-5">Allow ~6 members to travel and compete in the VEX U World Championships (anticipated qualification).</td>
+            </tr>
+            <tr class="border-b">
+              <td class="py-5">$4,000</td>
+              <td class="py-5">Allow us to purchase materials, motors, and sensors for progress on our CoffeeBot during Fall 2023. </td>
+            </tr>
+            <tr class="border-b">
+              <td class="py-5"><b>$20,000</b></td>
+              <td class="py-5"><b>-Total-</b></td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
 
+  </div>
+
       <!-- Progress Bar (https://flowbite.com/docs/components/progress/)-->
       <div class="w-full py-5 pt-10 text-4xl text-white">
-        $25,000 <span class="text-base text-gray-300">goal for competition travel</span>
+        $20,000 <span class="text-base text-gray-300">goal for 2023-24</span>
       </div>
 
-      <div class="flex w-full bg-gray-200 rounded-full h-10 md:h-7 items-center ">
-        <div class="bg-amber-400 h-10 md:h-7 p-1 rounded-full text-xs text-white text-center items-center" style="width: 20%">20% reached</div>
+      <div class="flex w-full bg-gray-200 rounded-full h-10 md:h-7 items-center">
+        <!--<div class="flex items-center my-auto pl-32 bg-amber-400 h-10 md:h-7 p-1 rounded-full text-xs text-white text-center " style="width: 45%">45% reached</div> -->
+        <div class="flex items-center my-auto  md:h-7 p-1 rounded-full text-xs text-center " style="width: 100%">0% reached</div>
+
       </div>
    
 
           
       <!--Support Us-->
-      <div class="w-full bg-black my-10 p-5 rounded-lg">
-        <h1 class="w-full text-4xl text-white"> Support Us</h>
+      <div class="w-full bg-white my-10 p-5 rounded-lg">
+        <h1 class="w-full text-4xl"> Tax-Deductible Support</h>
         <h1 class="w-full text-xl text-amber-400">Monetary Funds</h1>
-        <p class ="w-full text-white">
+        <p class ="w-full">
           You can donate online to us through the University of Alaska Foundation by going to 
           <a href="https://bit.ly/uaaroboticssupport" class ="underline text-amber-400" target="_blank"> https://bit.ly/uaaroboticssupport</a>.
           Check donations may be mailed to the UA Foundation 
@@ -184,7 +222,7 @@
         </p>
 
         <h1 class="w-full text-xl text-amber-400">Donations In-Kind</h1>
-        <p class ="w-full text-white">
+        <p class ="w-full">
           Donations in-kind are a special form of donation. 
           If you are giving a good or service, the process for acceptance is a bit different. 
           Please email a summary of the gift to be provided to 
@@ -195,123 +233,123 @@
           Dr. Heidari, or another authorized representative, will accept the gift if it meets the internal requirements for UAA 
           (e.g. the gift is needed and we have a place to store the product).
           <br><br>
-          From there you are free to give the gift, track its value, and UAA will follow up with a notice of acceptance. 
-          UAA will not appraise your gift – it is your responsibility to track the value of the goods or services provided.
-
-          Your monetary gift will be receipted by the University of Alaska Foundation and is 
-          <b>tax-deductible to the extent allowed by law</b>. 
-          Feel free to reach out to 
-          <a href="mailto:uaa_icebergrobotics@alaska.edu" class ="underline"> uaa_icebergrobotics@alaska.edu</a> 
-          with any questions or comments.
+          From there you are free to give the gift, track its value, and UAA will follow up with a notice of acceptance. UAA will not appraise your gift.
           <br><br>
         </p>
 
 
-        <h1 class="w-full text-xl text-amber-400">Recognition</h1>
-        <p class ="w-full text-white">
-          If you would like, we would be happy to recognize your donation by putting your name or company logo on our website 
-          and on the shirts and robots that we will bring to competitions. 
-          If you would like your name/logo on our shirt, please make sure to let us know you are donating by 1/1/2023 
-          so that we have time to print our shirts before our first competition. 
+        <h1 class="w-full text-xl text-amber-400">Flights/Miles</h1>
+        <p class ="w-full">
+          If you would like to give flights or miles, please contact 
+          <a href="mailto:uaa_icebergrobotics@alaska.edu" class ="underline"> uaa_icebergrobotics@alaska.edu</a>. 
+          However, please note that flights or miles are not tax-deductible through the University of Alaska Foundation.
         </p>
       </div>
 
-
-    
-
-          <!-- Funding Sources-->
-          <p class="w-full pt-10 text-4xl text-white"> 2022-2023 Funding Grants & Events </p>
-
-          <!--Pic Row-->
-          <div class=" flex w-full overflow-x-scroll pt-5 items-center  ">
-            
-            <div class = "mx-1">
-              <div class="w-96 h-96 rounded-lg overflow-hidden bg-gray-200 shadow-xl">
-                <img class="object-cover w-full h-52" src="fundPics/vexParts.png" alt=" VEX Parts">
-                <div class="px-6 py-4">
-                  <div class="font-bold text-xl ">UAA Special Project Fund & Club Council Fund </div>
-                  <div class="mb-2">Sep 2022</div>
-                  <p class="text-gray-700 text-base">
-                    4,515.79 to fund the initial supplies needed for the VEX competition.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class = "mx-1">
-              <div class="w-96 h-96 rounded-lg overflow-hidden bg-gray-200 shadow-xl">
-                <img class="object-cover w-full h-52" src="fundPics/waterPolo.png" alt="UAA Inner tube Water Polo">
-                <div class="px-6 py-2">
-                  <div class="font-bold text-xl ">UAA Innertube Water Polo Event</div>
-                  <div class="mb-2">13 Oct 2022</div>
-                  <p class="text-gray-700 text-base">
-                    We won $150 for the team by competing and tying in a water-polo game!
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class = "mx-1">
-              <div class="w-96 h-96 rounded-lg overflow-hidden bg-gray-200 shadow-xl">
-                <img class="object-cover w-full h-52" src="fundPics/volleyBake.png" alt="Bake Sale">
-                <div class="px-6 py-2">
-                  <div class="font-bold text-xl ">Bake Sale @ Pack the House UAA Volleyball Gam</div>
-                  <div class="mb-2">5 Nov 2022</div>
-                  <p class="text-gray-700 text-base">
-                    We raised $494.04 from selling goods and won an extra $500 from a raffle for clubs.
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div class = "mx-1">
-              <div class="w-96 h-96 rounded-lg overflow-hidden bg-gray-200 shadow-xl">
-                <img class="object-cover w-full h-52" src="fundPics/hockeyBake.png" alt="Bake Sale">
-                <div class="px-6 py-2">
-                  <div class="font-bold text-xl ">Bake Sale @ UAA Hockey Games</div>
-                  <div class="mb-2">5-6 Nov 2022</div>
-                  <p class="text-gray-700 text-base">
-                    We raised $510.17 and watched our home team win!
-                  </p>
-                </div>
-              </div>
-            </div>
+      <!--Donation Tiers-->
+      <div class="w-full bg-white  p-5 rounded-lg">
+        <h1 class="w-full text-4xl"> Donation Tiers</h1>
+        <p>To recognize your support, we have created support tiers for the 2023-2024 season. 
+          We greatly appreciate all donations!</p>
+        <img class=" flex m-4 xl:w-3/4  mx-auto" src="fundPics/teirs.png" alt="Team members working on the VEX Robot">
+      </div>
 
 
-            <div class = "mx-1">
-              <div class="w-96 h-96 rounded-lg overflow-hidden bg-gray-200 shadow-xl">
-                <img class="object-cover w-full h-52" src="fundPics/field.png" alt="Field">
-                <div class="px-6 py-2">
-                  <div class="font-bold text-xl ">REC Grant</div>
-                  <div class="mb-2">Dec 2022</div>
-                  <p class="text-gray-700 text-base">
-                    We won a REC grant to provide a VEX competition field and extra supplies.
-                  </p>
-                </div>
-              </div>
-            </div>
 
 
-            <div class = "mx-1">
-              <div class="w-96 h-96 rounded-lg overflow-hidden bg-gray-200 shadow-xl">
-                <img class="object-cover w-full h-52" src="fundPics/flowerSale.png" alt="Soldering Workshop">
-                <div class="px-6 py-2">
-                  <div class="font-bold text-xl ">Flower Sales at Graduation</div>
-                  <div class="mb-2">18 Dec 2022</div>
-                  <p class="text-gray-700 text-base">
-                    We partnered with Blossoms Express to sell flowers and we raised $1,219.80!
-                  </p>
-                </div>
-              </div>
+      <!-- Funding Sources-->
+      <p class="w-full pt-10 text-4xl text-white"> 2022-2023 Funding Grants & Events </p>
+
+      <!--Pic Row-->
+      <div class=" flex w-full overflow-x-scroll pt-5 items-center  ">
+        
+        <div class = "mx-1">
+          <div class="w-96 h-96 rounded-lg overflow-hidden bg-gray-200 shadow-xl">
+            <img class="object-cover w-full h-52" src="fundPics/vexParts.png" alt=" VEX Parts">
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl ">UAA Special Project Fund & Club Council Fund </div>
+              <div class="mb-2">Sep 2022</div>
+              <p class="text-gray-700 text-base">
+                $4,515.79 to fund the initial supplies needed for the VEX competition.
+              </p>
             </div>
           </div>
+        </div>
+
+        <div class = "mx-1">
+          <div class="w-96 h-96 rounded-lg overflow-hidden bg-gray-200 shadow-xl">
+            <img class="object-cover w-full h-52" src="fundPics/waterPolo.png" alt="UAA Inner tube Water Polo">
+            <div class="px-6 py-2">
+              <div class="font-bold text-xl ">UAA Inner Tube Water Polo Event</div>
+              <div class="mb-2">13 Oct 2022</div>
+              <p class="text-gray-700 text-base">
+                We won $150 for the team by competing and tying in a water-polo game!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class = "mx-1">
+          <div class="w-96 h-96 rounded-lg overflow-hidden bg-gray-200 shadow-xl">
+            <img class="object-cover w-full h-52" src="fundPics/volleyBake.png" alt="Bake Sale">
+            <div class="px-6 py-2">
+              <div class="font-bold text-xl ">Bake Sale @ Pack the House UAA Volleyball Gam</div>
+              <div class="mb-2">5 Nov 2022</div>
+              <p class="text-gray-700 text-base">
+                We raised $494.04 from selling goods and won an extra $500 from a raffle for clubs.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class = "mx-1">
+          <div class="w-96 h-96 rounded-lg overflow-hidden bg-gray-200 shadow-xl">
+            <img class="object-cover w-full h-52" src="fundPics/hockeyBake.png" alt="Bake Sale">
+            <div class="px-6 py-2">
+              <div class="font-bold text-xl ">Bake Sale @ UAA Hockey Games</div>
+              <div class="mb-2">5-6 Nov 2022</div>
+              <p class="text-gray-700 text-base">
+                We raised $510.17 and watched our home team win!
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class = "mx-1">
+          <div class="w-96 h-96 rounded-lg overflow-hidden bg-gray-200 shadow-xl">
+            <img class="object-cover w-full h-52" src="fundPics/field.png" alt="Field">
+            <div class="px-6 py-2">
+              <div class="font-bold text-xl ">REC Grant</div>
+              <div class="mb-2">Dec 2022</div>
+              <p class="text-gray-700 text-base">
+                We won a REC grant to provide a VEX competition field and extra supplies.
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class = "mx-1">
+          <div class="w-96 h-96 rounded-lg overflow-hidden bg-gray-200 shadow-xl">
+            <img class="object-cover w-full h-52" src="fundPics/flowerSale.png" alt="Soldering Workshop">
+            <div class="px-6 py-2">
+              <div class="font-bold text-xl ">Flower Sales at Graduation</div>
+              <div class="mb-2">18 Dec 2022</div>
+              <p class="text-gray-700 text-base">
+                We partnered with Blossoms Express to sell flowers and we raised $1,219.80!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
         
 
 
 
         <!--Footer-->
-        <p class="w-full mt-10 text-sm text-center text-white">
+        <p class="w-full p-5 pt-10 text-sm text-center text-white">
           Website created by the 2022/2023 UAA Robotics Programming Team</p>
         </p>
       </div>
