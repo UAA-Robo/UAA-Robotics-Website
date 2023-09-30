@@ -6,7 +6,7 @@ from pymongo import MongoClient
 # DELETE ME
 from bson.objectid import ObjectId #For working with PyMongo object Ids
 
-##USE 'FLASK RUN' COMMAND WITHIN YOUR VENV TO RUN APP##
+##USE 'FLASdK RUN' COMMAND WITHIN YOUR VENV TO RUN APP##
 
 app = Flask(__name__)
 
