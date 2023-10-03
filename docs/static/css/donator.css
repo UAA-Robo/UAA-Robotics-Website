@@ -3,9 +3,7 @@
     text-align: center;
     font-style: oblique;
     font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* subtler shadow */
     color: #6b8eaf; /* softer blue */
-    background: linear-gradient(45deg, #f6f4f1, #e0e7ef); /* gentle gradient from light beige to soft blue */
     padding: 10px;
     border-radius: 15px;
     margin: 20px;
