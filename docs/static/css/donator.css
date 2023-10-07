@@ -1,0 +1,10 @@
+.donator {
+    font-size: 4rem;
+    text-align: center;
+    font-style: oblique;
+    font-weight: bold;
+    color: #6b8eaf; /* softer blue */
+    padding: 10px;
+    border-radius: 15px;
+    margin: 20px;
+}

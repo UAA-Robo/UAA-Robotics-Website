@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>UAA Robotics</title>
+    <meta name="description" content="About UAA Iceberg Robotics" />
+    <meta name="keywords" content="UAA, Iceberg, Robotics, Alaska, Anchorage, University" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .hide-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    </style>
+
+
+  </head>
+
+  <body class="leading-normal tracking-normal bg-cover bg-teal-900" > <!--style="background-image: url('background.png');" --> 
+
+
+      <!--Nav-->
+      <nav class="flex items-center justify-between flex-wrap px-6">
+        
+        <div class="sm:w-2/12 flex items-center mx-auto pl-2">
+          <a href="../index.html">
+            <!--UAA <span class="bg-clip-text text-white ">Robotics</span> -->
+            <img class="object-fit w-48" src="../static/images/website_default/roboLogo.png" alt="Robotics Logo">
+          </a>
+        </div>
+
+        <!-- Hamburger button that can be used later w/ python/js
+        <div class="block lg:hidden">
+          
+          <button class="flex items-center px-3 py-2 border rounded text-white hover:text-yellow-300 hover:border-yellow-300">
+            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+          </button>
+          
+        </div>
+        -->
+        <div class="w-full flex-wrap block sm:w-7/12 flex-grow sm:ml-6 flex items-center w-auto">
+          <div class="text-base flex-grow menlo" style="font-size: 1.5rem;">
+            <a href="projects.html" class="block mt-4 inline-block sm:mt-0 text-white hover:text-yellow-300 mr-4">
+              Projects
+            </a>
+            <a href="outreach.html" class="block mt-4 inline-block sm:mt-0 text-white hover:text-yellow-300 mr-4">
+              Outreach
+            </a>
+            <a href="fund.html" class="block mt-4 inline-block sm:mt-0 text-white hover:text-yellow-300">
+              Funding
+            </a>
+          </div>
+          
+          <div class="flex w-full sm:w-3/12 sm:justify-end content-center mt-4 sm:mt-0">
+            <a class="inline-block text-cyan-300 hover:text-yellow-300 h-6  p-1  transform hover:scale-125 duration-300 ease-in-out" 
+            href="mailto:uaa_icebergrobotics@alaska.edu">
+              <svg class="h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              </svg>
+            </a>
+
+            <a class="inline-block text-cyan-300 hover:text-yellow-300 h-6 p-1 transform hover:scale-125 duration-300 ease-in-out" 
+            href="https://www.linkedin.com/company/uaarobotics/" target="_blank">
+            <svg class="h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" fill ="currentColor" >
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            </a>
+
+            <a class="inline-block text-cyan-300 hover:text-yellow-300  h-6 p-1 transform hover:scale-125 duration-300 ease-in-out" 
+            href="https://www.youtube.com/channel/UCvZvZTJamj-XVv0YwWK5Qcw" target="_blank">
+            <svg class="h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="h-6">
+              <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+            </svg>
+            </a>
+
+            
+            <a class="inline-block text-cyan-300 hover:text-yellow-300 h-6 p-1 transform hover:scale-125 duration-300 ease-in-out" 
+            href="https://twitter.com/uaarobotics" target="_blank">
+              <svg class="fill-current h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" >
+                <path
+                  d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"
+                ></path>
+              </svg>
+            </a>
+
+            <a
+              class="inline-block text-cyan-300 hover:text-yellow-300 h-6 p-1 transform hover:scale-125 duration-300 ease-in-outt"
+              href="https://www.facebook.com/UAARobotics/" target="_blank">
+              <svg class="fill-current h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" >
+                <path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path>
+              </svg>
+            </a>
+
+            <a
+              class="inline-block text-cyan-300 hover:text-yellow-300 h-6 p-1 transform hover:scale-125 duration-300 ease-in-outt"
+              href="https://www.instagram.com/uaa_robotics/" target="_blank">
+              <svg class="fill-current h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+              </svg>
+            </a>
+
+            <a
+              class="inline-block text-cyan-300 hover:text-yellow-300 h-6 p-1 transform hover:scale-125 duration-300 ease-in-outt"
+              href="https://github.com/UAA-Robo" target="_blank">
+              <svg class="fill-current h-6"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+              </svg>
+            </a>
+            
+          </div>
+        </div>
+      </nav>
+
+
+      <!--Main-->
+      <div class="w-full flex block flex-grow flex-wrap w-auto mt-10 ">
+        <!--Project Management Section-->
+        <div class = " flex w-full flex-wrap text-white m-5">
+          <h1 class="w-full text-4xl font-bold overline "> Project Management</h1>
+        </div>
+      
+        <div class="flex w-full flex-wrap items-center m-5 px-5 bg-black rounded-lg">
+          <div class = "flex w-full lg:w-3/5 p-5 text-white flex-wrap">
+            <p class="">
+              The UAA Robotics Team is committed to creating a culture of collaboration. 
+              Each team meeting is centered around a task structure. 
+              Tasks are posted by the team leads so members can choose which tasks they can tackle. 
+              This system opens the door for students to explore other disciplines, while also providing communication on what tasks need to be completed. 
+              Implementing tasks ensures we are using our team members' time effectively and efficiently. 
+              Team members can come to our meetings, help complete a specific task, and know that they had a direct impact on our team. 
+            
+            <br><br>
+            
+              Additionally, this task structure naturally leads to documentation. 
+              Each task includes a section for taking notes and recording the outcome. 
+              The main role of leads on our team is to create tasks and make sure they are documented properly. 
+              We have done this because we understand the importance of documentation in team communication. 
+              We need to have a clear trail of our thoughts and actions as we develop robots and win competitions. 
+              This ensures that future UAA Robotics Teams have the ability to read our documentation, and build upon what we have learned. 
+              Documenting also allows us to better learn from any mistakes that we make. 
+              Such emphasis on documentation and learning from our mistakes will lead to a sustainable and interactive program for the future team.
+            </p>
+
+            <div class=" flex w-full pt-5 flex-wrap text-black font-bold rounded-lg">
+              <div class="m-2 p-2 rounded-full bg-yellow-500">Documentation</div>
+              <div class="m-2 p-2 rounded-full bg-gray-300">Communication</div>
+              <div class="m-2 p-2 rounded-full bg-yellow-500">Presentation</div>
+              <div class="m-2 p-2 rounded-full bg-gray-300">Team Work</div>
+              <div class="m-2 p-2 rounded-full bg-yellow-500">Initiation</div>
+            </div>
+          </div>
+
+          <div class = "flex flex-wrap w-full lg:w-2/5 py-5 justify-center ">
+              <iframe class="object-contain w-full aspect-video rounded-lg"
+              src="https://youtube.com/embed/1s-yFbTPmWI?autoplay=1&mute=1">
+              </iframe>
+          </div>
+      
+        </div>
+      
+        <!--VEX U Info row-->
+        <div class = " flex w-full flex-wrap text-white mx-5 mt-10">
+          <h1 class="w-full text-4xl font-bold overline "> VEX U Competition</h1>
+          <h2 class="w-full text-xl"> Fall 2022-Spring 2023</h1>
+        </div>
+
+
+        <div class="flex w-full flex-wrap items-center m-5 px-5 bg-black rounded-lg">
+          <div class = "flex w-full md:w-1/2 flex-wrap text-white p-5">
+            <p class=" text-white">
+              VEX U requires us to design, build, and program robots to compete in challenge matches. 
+              It is a competitive competition that includes 300+ teams from across the world. 
+              In-person competitions require travel across the continental US. 
+              Rankings from these competitions will determine if we make it to the World Championship competition.
+              For the competition, we design two robots to compete in three minute challenge matches. The challenges change each year.
+            </p>
+          </div>
+
+          <div class = "flex flex-wrap w-full md:w-1/2 p-5 text-white">
+              <iframe class="object-contain w-full aspect-video rounded-lg"
+              src="https://youtube.com/embed/wIZgvVDZc2Y?autoplay=1&mute=1">
+              </iframe>
+          </div>
+
+          <!--Timeline (from https://flowbite.com/docs/components/timeline/)-->
+          <ol class="items-center sm:flex m-10">
+            <li class="relative mb-6 sm:mb-0">
+                <div class="flex items-center">
+                    <div class="z-10 flex  justify-center w-6 h-6 bg-amber-400 rounded-full ring-0 ring-white sm:ring-8 shrink-0"></div>
+                    <div class="hidden sm:flex w-full bg-gray-200 h-0.5"></div>
+                </div>
+                <div class="mt-3 sm:pr-8">
+                    <a class="text-lg font-semibold text-white hover:underline" href ="https://www.robotevents.com/robot-competitions/college-competition/RE-VEXU-22-0480.html#general-info" target="_blank">
+                      Alaska Live Remote Skills Competition
+                    </a>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-400">22 Jan 2023</time>
+                    <div class="text-sm font-semibold text-yellow-500">
+                      Results: Ranked #10 in the World!
+                    </div>
+                </div>
+            </li>
+  
+            <li class="relative mb-6 sm:mb-0">
+              <div class="flex items-center">
+                  <div class="z-10 flex items-center justify-center w-6 h-6 bg-amber-400 rounded-full ring-0 ring-white sm:ring-8 shrink-0"></div>
+                  <div class="hidden sm:flex w-full bg-gray-200 h-0.5 "></div>
+              </div>
+              <div class="mt-3 sm:pr-8">
+                  <a class="text-lg font-semibold text-white hover:underline" href ="https://www.robotevents.com/robot-competitions/college-competition/RE-VEXU-22-8604.html#general-info" target="_blank">
+                    Tigertown Throwdown Tournament
+                  </a>
+                  <time class="block mb-2 text-sm font-normal leading-none text-gray-400">4 Feb 2023</time>
+                  <div class="text-sm font-semibold text-yellow-500">
+                    Results: Placed #4 out of 16 registered teams and won Judges Award!
+                  </div>
+              </div>
+            </li>
+  
+  
+            <li class="relative mb-6 sm:mb-0">
+              <div class="flex items-center">
+                  <div class="z-10 flex items-center justify-center w-6 h-6 bg-amber-400 rounded-full ring-0 ring-white sm:ring-8  shrink-0"></div>
+                  <div class="hidden sm:flex w-full bg-gray-200 h-0.5"></div>
+              </div>
+              <div class="mt-3 sm:pr-8">
+                <a class="text-lg font-semibold text-white hover:underline" href ="https://www.robotevents.com/robot-competitions/college-competition/RE-VEXU-22-9727.html#general-info" target="_blank">
+                  VEX Robotics World Championship 
+                </a>
+                  <time class="block mb-2 text-sm font-normal leading-none text-gray-400">27-29 Apr 2023</time>
+                  <div class="text-sm font-semibold text-yellow-500">
+                    Results: Ranked 28th out of 50 in our division 
+                    and won the Girl Powered Challenge!
+                  </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        
+
+
+      
+
+        <!--Technical Section-->
+        <div class="flex flex-wrap w-full bg-amber-400 my-10 py-10 px-12 items-center" >
+            <!--Robot Design Section-->
+            <h1 class="w-full text-2xl font-bold "> Robot Design</h1>
+
+            <div class = "flex w-full md:w-2/5 flex-wrap py-5 pr-5">
+              <p class="">
+                For the 2022-2023 Spin Up Challenge, we have to design 2 robots, one less than 15”x15”x15” and the other less then 18”x18”x18”.
+                Our robot needs to be able to quickly and efficiently score points by shooting disks (majority of the points), 
+                owning rollers, and expanding during the last 10 seconds of a match (see video above for more details).
+                We can use VEX materials or fabricate our own.
+                <br><br>
+                After careful consideration, we went with a front load and back shoot of disks. 
+                Disks are taken in by a vertical track, stored in a hopper, and shot with a flywheel.
+                The robots turn rollers with a wheel at the front and expands by shooting string onto the field.
+              </p>
+
+              <div class=" flex w-full pt-5 flex-wrap text-yellow-500 font-bold rounded-lg">
+                <div class="m-2 p-2 rounded-full bg-gray-800">CAD</div>
+                <div class="m-2 p-2 rounded-full bg-white">Machining</div>
+                <div class="m-2 p-2 rounded-full bg-gray-800">3D Printing</div>
+                <div class="m-2 p-2 rounded-full bg-white">Wiring</div>
+                <div class="m-2 p-2 rounded-full bg-gray-800">Assembly</div>
+              </div>
+            </div>
+
+         
+            <div class=" flex overflow-x-scroll md:w-3/5 items-center ">
+              <div class = "mx-1">
+              <div class="w-80 h-96 rounded-lg overflow-hidden bg-gray-200 shadow-xl">
+                <img class="w-full" src="../static/images/robotPics/robotLoad.png" alt="Robot Front">
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2">Robot Front</div>
+                  <p class="text-gray-700 text-base">
+                    This is the front of the robot with a vertical disk intake system.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class = "mx-1">
+              <div class="w-80 h-96 rounded-lg mx-3 overflow-hidden bg-gray-200 shadow-lg">
+                <img class="w-full" src="../static/images/robotPics/robotShooter.png" alt="Robot Back">
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2">Robot Back</div>
+                  <p class="text-gray-700 text-base">
+                    This is the back of the robot where the disks are stored and shot with a flywheel.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class = "mx-1">
+              <div class="w-80 h-96 rounded-lg mx-3 overflow-hidden bg-gray-200 shadow-lg">
+                <img class="w-full" src="../static/images/robotPics/robotDrive.png" alt="Robot Drive Train">
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2">Robot Drive Train</div>
+                  <p class="text-gray-700 text-base">
+                    This is the the Fusion 360 CAD of our drive train.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+          <!--Programming Section-->
+
+          <h1 class="flex w-full text-2xl font-bold pt-20"> Programming</h1>
+
+
+          <div class = "flex w-full flex-wrap py-5 pr-5">
+            <p class="">
+              Matches consist of a 45 second autonomous period and a 1:15 minute driver controlled period.
+              We need to be able to control the robots driving, intake of disks, and shooting with the controller to be used during the driver controlled period. 
+              Repeated feedback from the mechanical team and the designated drivers makes this as efficient as possible.
+              We also need to have a program to handle robot motor controls for the automation phase that depends on input from vision sensor, gyro direction sensor, etc.
+
+            </p>
+          
+
+          <div class=" flex w-full pt-5 flex-wrap text-yellow-500 font-bold rounded-lg">
+            <div class="m-2 p-2 rounded-full bg-gray-800">C++</div>
+            <div class="m-2 p-2 rounded-full bg-white">API</div>
+            <div class="m-2 p-2 rounded-full bg-gray-800">Controls</div>
+          </div>
+
+        </div>
+      </div>
+
+
+        <!--CoffeeBot Info row-->
+        <div class = " flex w-full flex-wrap text-white mx-5 mt-10">
+          <h1 class="w-full text-4xl font-bold overline "> CoffeeBot Project</h1>
+          <h2 class="w-full text-xl"> Spring 2023-Spring 2024</h1>
+        </div>
+
+
+        <div class="flex w-full flex-wrap items-center m-5 px-5 bg-black rounded-lg">
+          <div class = "flex w-full flex-wrap text-white p-5">
+            <p class=" text-white">
+              We’ve all just come out of a pandemic - tell me, was getting your daily cup of coffee an anxiety-inducing exercise in social distancing? 
+              Have you ever been so sleepy in the morning that the chipper Starbucks barista induces unmitigated frustration?  
+              Do you just dislike people but love coffee?  Well, we have a solution for you - the UAA CoffeeBot!  
+              Of course we’re being tongue-and-cheek, but we are working on a real robot that can do a real job in the real world.  
+              <br><br>
+
+              The CoffeeBot Project aims to build a fully autonomous robotic arm which serves coffee in the 2nd Floor Cafe of the Engineering Industry Building (EIB) at UAA. 
+              This cafe has been vacant since the pandemic began and our robot will eventually be able to autonomously serve students, faculty, and the community with delicious coffee.  
+              Not only that, we expect it to eventually make money which will help fund future projects the club has in mind. 
+              Passive profit from the CoffeeBot means more projects for the club which means further opportunities for club members gain to hands-on experience that is applicable to their future career course. 
+              Additionally, more robotics projects means more exposure for the club and the UAA, which encourages community involvement.
+              
+            </p>
+          </div>
+        </div>
+
+        <!--Technical Section-->
+        <div class="flex flex-wrap w-full bg-amber-400 my-10 py-10 px-12 items-center" >
+            <!--Robot Design Section-->
+            <h1 class="w-full text-2xl font-bold "> Robot Design</h1>
+
+            <div class = "flex w-full  md:w-2/5 flex-wrap py-5 pr-5">
+              <p class="">
+                The robotic arm will consist of three different major components, the base, the arm structure, and the claw. 
+                Each component will have its own detailed design process consisting of solidworks modeling and in lab prototyping. 
+              </p>
+
+              <div class=" flex w-full pt-5 flex-wrap text-yellow-500 font-bold rounded-lg">
+                <div class="m-2 p-2 rounded-full bg-gray-800">CAD</div>
+                <div class="m-2 p-2 rounded-full bg-white">Machining</div>
+                <div class="m-2 p-2 rounded-full bg-gray-800">3D Printing</div>
+                <div class="m-2 p-2 rounded-full bg-gray-800">Finite Element Analysis</div>
+                <div class="m-2 p-2 rounded-full bg-white">Wiring</div>
+                <div class="m-2 p-2 rounded-full bg-gray-800">Assembly</div>
+              </div>
+
+            </div>
+
+
+            <div class=" flex overflow-x-scroll md:w-3/5 items-center ">
+
+              <div class = "mx-1">
+                <div class="w-80 h-96 rounded-lg overflow-hidden bg-gray-200 shadow-xl">
+                  <img class="w-full" src="../static/images/robotPics/CoffeeBotMVP1.png" alt="CoffeeBot MVC">
+                  <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">MVC  </div>
+                    <p class="text-gray-700 text-base">
+                      We created a 6-DOF 3D printed Minimal Viable CoffeeBot, before we move 
+                      onto the full model.
+                    </p>
+                  </div>
+                </div>
+            </div>
+
+              <div class = "mx-1">
+              <div class="w-80 h-96 rounded-lg overflow-hidden bg-gray-200 shadow-xl">
+                <img class="w-full" src="../static/images/robotPics/CoffeebotClaw.png" alt="CoffeeBot Claw V1">
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2">Claw Design Version 1.0</div>
+                  <p class="text-gray-700 text-base">
+                    This is the first claw design used in our MVC.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+      
+
+          <!--Programming Section-->
+
+          <h1 class="flex w-full text-2xl font-bold pt-20"> Programming</h1>
+
+
+          <div class = "flex w-full  flex-wrap py-5 pr-5">
+            <p class="">
+              We want the CoffeeBot to be fully autonomous. 
+              That means that we will be incorporating wireless payment options to trigger the bot to deploy. 
+              We will also eventually introduce Machine Learning to the robot to perform actions such as voice recognition/communication, efficient scheduling, path inference, and more. 
+              This will all ensure that the user experience will be made intuitive, convenient, and memorable.
+
+            </p>
+          
+
+          <div class=" flex w-full pt-5 flex-wrap text-yellow-500 font-bold rounded-lg">
+            <div class="m-2 p-2 rounded-full bg-gray-800">Python</div>
+            <div class="m-2 p-2 rounded-full bg-white">API</div>
+            <div class="m-2 p-2 rounded-full bg-gray-800">Arduino</div>
+            <div class="m-2 p-2 rounded-full bg-white">Raspberry Pi</div>
+            <div class="m-2 p-2 rounded-full bg-gray-800">I2C</div>
+          </div>
+
+        </div>
+      </div>
+
+        <!--Footer-->
+        <p class="w-full p-5 pt-10 text-sm text-center text-white">
+          Website created by the 2022/2023 UAA Robotics Programming Team</p>
+        </p>
+
+    </div>
+
+    </body>
+</html>
